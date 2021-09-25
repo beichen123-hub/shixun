@@ -52,3 +52,23 @@ INFO 2021-09-25 15:46:56,219 autoreload 636 Watching for file changes with StatR
 INFO 2021-09-25 15:46:59,518 basehttp 161 "GET / HTTP/1.1" 200 18
 WARNING 2021-09-25 15:46:59,748 log 224 Not Found: /favicon.ico
 WARNING 2021-09-25 15:46:59,749 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2099
+INFO 2021-09-25 16:18:24,871 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-25 16:18:27,043 basehttp 161 "GET / HTTP/1.1" 200 18
+INFO 2021-09-25 16:19:01,347 basehttp 161 "GET /static/calmlog-index.html HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,369 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,369 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,369 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,385 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,385 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,398 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,400 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,401 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,405 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,406 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,410 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,412 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,415 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,415 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,420 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,423 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-25 16:19:01,514 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
