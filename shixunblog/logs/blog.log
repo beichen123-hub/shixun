@@ -72,3 +72,247 @@ INFO 2021-09-25 16:19:01,415 basehttp 161 "GET /static/temporary-img/list-image3
 INFO 2021-09-25 16:19:01,420 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
 INFO 2021-09-25 16:19:01,423 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
 INFO 2021-09-25 16:19:01,514 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+INFO 2021-09-26 09:07:05,317 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:07:25,469 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:08:07,990 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:08:10,813 basehttp 161 "GET / HTTP/1.1" 200 18
+WARNING 2021-09-26 09:08:11,140 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 09:08:11,140 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2099
+INFO 2021-09-26 09:44:07,287 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:44:53,452 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:45:20,626 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:45:53,905 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:46:42,472 autoreload 250 D:\桌面\shixun\shixunblog\shixunblog\urls.py changed, reloading.
+INFO 2021-09-26 09:46:43,461 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:46:44,370 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:47:39,360 autoreload 250 D:\桌面\shixun\shixunblog\shixunblog\urls.py changed, reloading.
+INFO 2021-09-26 09:47:40,428 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:47:41,193 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:47:59,018 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:48:11,457 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:49:30,851 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:49:47,262 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:51:02,758 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:51:58,509 autoreload 250 D:\桌面\shixun\shixunblog\shixunblog\settings.py changed, reloading.
+INFO 2021-09-26 09:51:59,455 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:53:34,251 autoreload 250 D:\桌面\shixun\shixunblog\shixunblog\settings.py changed, reloading.
+INFO 2021-09-26 09:53:35,319 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:54:09,425 autoreload 250 D:\桌面\shixun\shixunblog\users\urls.py changed, reloading.
+INFO 2021-09-26 09:54:10,344 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:54:29,213 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 09:54:31,411 log 224 Not Found: /
+WARNING 2021-09-26 09:54:31,412 basehttp 161 "GET / HTTP/1.1" 404 2121
+WARNING 2021-09-26 09:54:31,541 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 09:54:31,542 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2172
+WARNING 2021-09-26 09:55:04,444 log 224 Not Found: /regist.html
+WARNING 2021-09-26 09:55:04,445 basehttp 161 "GET /regist.html HTTP/1.1" 404 2172
+WARNING 2021-09-26 09:55:09,796 log 224 Not Found: /regist
+WARNING 2021-09-26 09:55:09,796 basehttp 161 "GET /regist HTTP/1.1" 404 2157
+INFO 2021-09-26 09:55:32,823 basehttp 161 "GET /register HTTP/1.1" 301 0
+ERROR 2021-09-26 09:55:32,979 log 224 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 8, in get
+    return render(request, 'register.html')
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2021-09-26 09:55:32,980 basehttp 161 "GET /register/ HTTP/1.1" 500 91998
+INFO 2021-09-26 09:57:06,412 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-26 09:57:10,161 log 224 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 8, in get
+    return render(request, "register.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2021-09-26 09:57:10,162 basehttp 161 "GET /register/ HTTP/1.1" 500 92135
+ERROR 2021-09-26 09:57:10,778 log 224 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 8, in get
+    return render(request, "register.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register.html
+ERROR 2021-09-26 09:57:10,780 basehttp 161 "GET /register/ HTTP/1.1" 500 92135
+INFO 2021-09-26 09:58:16,202 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 09:58:19,396 basehttp 161 "GET /register/ HTTP/1.1" 200 2610
+INFO 2021-09-26 09:58:19,420 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,421 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,424 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,426 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,427 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,427 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-26 09:58:19,428 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+WARNING 2021-09-26 09:58:19,432 log 224 Not Found: /register/highlight/styles/railscasts.css
+WARNING 2021-09-26 09:58:19,433 basehttp 161 "GET /register/highlight/styles/railscasts.css HTTP/1.1" 404 2259
+INFO 2021-09-26 10:06:35,477 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 10:06:43,109 log 224 Not Found: /
+WARNING 2021-09-26 10:06:43,110 basehttp 161 "GET / HTTP/1.1" 404 2121
+INFO 2021-09-26 10:06:53,271 basehttp 161 "GET /register/ HTTP/1.1" 200 2610
+WARNING 2021-09-26 10:06:53,296 log 224 Not Found: /register/highlight/styles/railscasts.css
+WARNING 2021-09-26 10:06:53,296 basehttp 161 "GET /register/highlight/styles/railscasts.css HTTP/1.1" 404 2259
+INFO 2021-09-26 10:22:48,064 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:23:10,339 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:23:38,286 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:23:48,007 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:23:54,544 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:25:11,537 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:25:55,540 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 10:26:51,279 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 10:26:58,364 log 224 Not Found: /
+WARNING 2021-09-26 10:26:58,364 basehttp 161 "GET / HTTP/1.1" 404 2121
+INFO 2021-09-26 10:27:04,719 basehttp 161 "GET /register/ HTTP/1.1" 200 2610
+WARNING 2021-09-26 10:27:04,743 log 224 Not Found: /register/highlight/styles/railscasts.css
+WARNING 2021-09-26 10:27:04,743 basehttp 161 "GET /register/highlight/styles/railscasts.css HTTP/1.1" 404 2259
+INFO 2021-09-26 10:38:44,360 basehttp 161 "GET /register/ HTTP/1.1" 200 2610
+WARNING 2021-09-26 10:38:44,383 log 224 Not Found: /register/highlight/styles/railscasts.css
+WARNING 2021-09-26 10:38:44,383 basehttp 161 "GET /register/highlight/styles/railscasts.css HTTP/1.1" 404 2259
+INFO 2021-09-26 10:55:32,682 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:29:10,864 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 11:29:18,596 log 224 Not Found: /register/highlight/styles/railscasts.css
+WARNING 2021-09-26 11:29:18,597 basehttp 161 "GET /register/highlight/styles/railscasts.css HTTP/1.1" 404 2416
+INFO 2021-09-26 11:29:19,982 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:29:20,005 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+WARNING 2021-09-26 11:29:20,007 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 404 1679
+INFO 2021-09-26 11:29:20,012 basehttp 161 "GET /static/js/register.js HTTP/1.1" 200 6438
+INFO 2021-09-26 11:29:20,012 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 35
+WARNING 2021-09-26 11:29:20,015 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+WARNING 2021-09-26 11:29:20,042 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+INFO 2021-09-26 11:31:34,305 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:31:34,356 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+WARNING 2021-09-26 11:31:34,357 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 404 1679
+WARNING 2021-09-26 11:31:34,366 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+INFO 2021-09-26 11:31:36,233 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:31:36,256 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 404 1679
+WARNING 2021-09-26 11:31:36,256 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+INFO 2021-09-26 11:33:35,826 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:33:39,603 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:33:39,729 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 404 1679
+WARNING 2021-09-26 11:33:39,730 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+INFO 2021-09-26 11:33:40,547 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:33:40,574 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 404 1679
+WARNING 2021-09-26 11:33:40,574 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 404 1697
+INFO 2021-09-26 11:35:45,702 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:35:50,145 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:35:50,164 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2021-09-26 11:35:50,167 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2021-09-26 11:35:50,212 basehttp 161 "GET /imagecode/?uuid=1acc40be-7100-4ce2-999f-a7d94e931d6f HTTP/1.1" 200 5939
+INFO 2021-09-26 11:35:53,400 basehttp 161 "GET /imagecode/?uuid=73b957c1-825d-4c54-a3da-dda50d10ca1e HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:52,091 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:52,140 basehttp 161 "GET /imagecode/?uuid=555fd7b4-a291-47e3-9f58-6a6d9a3873e3 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:53,817 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:53,859 basehttp 161 "GET /imagecode/?uuid=6fa201f1-a60d-495d-a47d-075e3e31468a HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:54,560 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:54,595 basehttp 161 "GET /imagecode/?uuid=c4cbb6b8-481a-4168-a53c-3a602b795c54 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:55,298 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:36:55,342 basehttp 161 "GET /imagecode/?uuid=59b5a99e-0f91-4919-8777-4c5acce68ee5 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:37:53,288 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:37:55,870 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:37:55,920 basehttp 161 "GET /imagecode/?uuid=61ea5dc2-14b5-4b52-94d8-e399d8efd0ef HTTP/1.1" 200 5939
+INFO 2021-09-26 11:37:56,898 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:37:56,938 basehttp 161 "GET /imagecode/?uuid=d634e3c5-da0a-4f71-95d2-8a872bd6ec34 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:38:41,759 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 11:38:43,231 log 224 Not Found: /
+WARNING 2021-09-26 11:38:43,232 basehttp 161 "GET / HTTP/1.1" 404 2296
+INFO 2021-09-26 11:38:49,024 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:38:49,142 basehttp 161 "GET /imagecode/?uuid=df439e18-b9b5-4c79-a814-2bef0450e5a4 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:38:51,775 basehttp 161 "GET /imagecode/?uuid=f0d67b73-64fc-42ed-8582-526d1805e727 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:38:52,323 basehttp 161 "GET /imagecode/?uuid=4200e3f6-1172-46aa-a794-14387c921c17 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:38:52,691 basehttp 161 "GET /imagecode/?uuid=a1c08f06-08ce-4e34-b3fd-aae2f7e4a0ba HTTP/1.1" 200 5939
+INFO 2021-09-26 11:39:08,234 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:39:08,305 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 31004
+INFO 2021-09-26 11:39:08,307 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140942
+INFO 2021-09-26 11:39:08,317 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 200 1317
+INFO 2021-09-26 11:39:08,324 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 200 8468
+INFO 2021-09-26 11:39:08,330 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 51045
+INFO 2021-09-26 11:39:08,337 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 200 97168
+INFO 2021-09-26 11:39:08,345 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 35
+INFO 2021-09-26 11:39:08,356 basehttp 161 "GET /static/js/register.js HTTP/1.1" 200 6438
+INFO 2021-09-26 11:39:08,376 basehttp 161 "GET /static/vue/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2021-09-26 11:39:08,384 basehttp 161 "GET /static/vue/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2021-09-26 11:39:08,402 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 200 5903
+INFO 2021-09-26 11:39:08,415 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 200 46072
+INFO 2021-09-26 11:39:08,459 basehttp 161 "GET /imagecode/?uuid=fa65179b-62f7-4035-ace9-bd16c4c49342 HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:39:08,514 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 11:39:08,514 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2347
+INFO 2021-09-26 11:42:26,609 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:42:31,103 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:31,163 basehttp 161 "GET /imagecode/?uuid=ac97988d-e1fc-44fd-b205-b6f06c34c1b5 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:32,237 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:32,278 basehttp 161 "GET /imagecode/?uuid=eebd8079-2849-4297-a2a1-d16d24fe6e70 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:33,054 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:33,098 basehttp 161 "GET /imagecode/?uuid=c86692ac-897f-403a-9ad5-cf7d0f9be1a1 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:42:36,349 basehttp 161 "GET /imagecode/?uuid=af56a2bd-8b14-4aa6-9727-b47e38233c7a HTTP/1.1" 200 5939
+WARNING 2021-09-26 11:42:38,441 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-26 11:42:38,443 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-26 11:42:38,444 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-26 11:43:24,257 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 11:43:26,686 log 224 Not Found: /
+WARNING 2021-09-26 11:43:26,687 basehttp 161 "GET / HTTP/1.1" 404 2296
+INFO 2021-09-26 11:43:32,765 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:32,840 basehttp 161 "GET /imagecode/?uuid=2f3e2c8e-f903-425e-be7b-4bdacbe2994a HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:36,716 basehttp 161 "GET /imagecode/?uuid=cd5a038c-983a-4e2d-90fa-914c14f64728 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:37,264 basehttp 161 "GET /imagecode/?uuid=d265b3f0-87b6-453a-b01a-660abe662318 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:37,824 basehttp 161 "GET /imagecode/?uuid=51f60571-a0a2-416f-8554-48357bb3ec51 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:38,288 basehttp 161 "GET /imagecode/?uuid=2822960c-7d06-4ab6-8425-b82e9d495976 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:38,671 basehttp 161 "GET /imagecode/?uuid=8433e998-8feb-4c1a-b593-4dc9af7fb71f HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:38,892 basehttp 161 "GET /imagecode/?uuid=a1d07fd4-ca97-4200-b776-0cd42d9f59c5 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:39,052 basehttp 161 "GET /imagecode/?uuid=45b1d6af-7fb2-41c4-b4d3-ca3bff665883 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:43:40,337 basehttp 161 "GET /imagecode/?uuid=709f3d73-c286-4050-82d5-b4d12e159bf1 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:37,055 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 11:46:39,477 log 224 Not Found: /
+WARNING 2021-09-26 11:46:39,478 basehttp 161 "GET / HTTP/1.1" 404 2296
+INFO 2021-09-26 11:46:48,410 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:48,561 basehttp 161 "GET /imagecode/?uuid=c77cbce7-74d4-41f9-9ebe-f6b0d581663f HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:51,061 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:51,107 basehttp 161 "GET /imagecode/?uuid=9c622c4c-80c1-42c5-b504-d3788bb49db6 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:51,820 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:51,852 basehttp 161 "GET /imagecode/?uuid=71d92ca2-0636-4e63-8372-22f92a74847c HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:52,600 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:46:52,642 basehttp 161 "GET /imagecode/?uuid=b17ad378-adc5-4ae8-b005-9cd2afbda992 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:50:02,702 autoreload 250 D:\桌面\shixun\shixunblog\shixunblog\settings.py changed, reloading.
+INFO 2021-09-26 11:50:03,817 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:50:27,485 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:50:32,547 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:50:32,624 basehttp 161 "GET /imagecode/?uuid=6831dd13-af68-42a2-b4c7-c5c5409360c3 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:50:33,375 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:50:33,426 basehttp 161 "GET /imagecode/?uuid=fc794581-dc6f-444c-be44-d36898937284 HTTP/1.1" 200 5939
+INFO 2021-09-26 11:50:57,711 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-26 11:51:01,978 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 11:51:02,371 basehttp 161 "GET /imagecode/?uuid=44f9813b-e44c-4cd7-8e9f-4cf540903033 HTTP/1.1" 200 3298
