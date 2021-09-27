@@ -7,10 +7,19 @@
 # @function: the script is used to do something.
 # IDE      : PyCharm 
 # project name:shixunblog
+# 子应用路由
 from django.urls import path
-from users.views import RegisterView, ImageView
+from users.views import RegisterView # 导入注册视图
+from users.views import ImageView # 导入验证码视图
+from users.views import SmsCodeView # 导入短信验证码视图
 
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
-    path('imagecode/', ImageView.as_view(), name='imagecode'),
+    # 参数1：路由
+    # 参数2：视图函数
+    # 参数3：路由名，方便通过reverse来获取路由
+    path('register/',RegisterView.as_view(), name='register'),
+    # 图片验证码路由
+    path('imagecode/',ImageView.as_view(), name='imagecode'),
+    # 短信验证码
+    path('smscode/',SmsCodeView.as_view(), name='smscode')
 ]

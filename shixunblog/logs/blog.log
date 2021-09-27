@@ -316,3 +316,401 @@ INFO 2021-09-26 11:50:33,426 basehttp 161 "GET /imagecode/?uuid=fc794581-dc6f-44
 INFO 2021-09-26 11:50:57,711 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-09-26 11:51:01,978 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
 INFO 2021-09-26 11:51:02,371 basehttp 161 "GET /imagecode/?uuid=44f9813b-e44c-4cd7-8e9f-4cf540903033 HTTP/1.1" 200 3298
+INFO 2021-09-26 17:45:15,554 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 17:45:19,118 log 224 Not Found: /
+WARNING 2021-09-26 17:45:19,118 basehttp 161 "GET / HTTP/1.1" 404 2296
+WARNING 2021-09-26 17:45:19,206 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 17:45:19,207 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2347
+INFO 2021-09-26 17:45:24,524 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 17:45:24,549 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,551 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,552 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,552 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,554 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,558 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,559 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-26 17:45:24,559 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+ERROR 2021-09-26 17:45:28,274 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:45:28,278 basehttp 161 "GET /imagecode/?uuid=e94758b6-6eb1-4123-a3ba-2d269fbe7bbd HTTP/1.1" 500 116289
+INFO 2021-09-26 17:45:32,504 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+ERROR 2021-09-26 17:45:32,566 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+INFO 2021-09-26 17:45:32,569 basehttp 75 - Broken pipe from ('127.0.0.1', 53562)
+
+ERROR 2021-09-26 17:45:34,640 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+INFO 2021-09-26 17:45:34,641 basehttp 75 - Broken pipe from ('127.0.0.1', 56965)
+
+ERROR 2021-09-26 17:45:36,471 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+INFO 2021-09-26 17:45:36,472 basehttp 75 - Broken pipe from ('127.0.0.1', 55497)
+
+INFO 2021-09-26 17:47:36,769 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 17:47:41,757 log 224 Not Found: /
+WARNING 2021-09-26 17:47:41,758 basehttp 161 "GET / HTTP/1.1" 404 2296
+WARNING 2021-09-26 17:47:41,936 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 17:47:41,938 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2347
+INFO 2021-09-26 17:47:47,164 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+ERROR 2021-09-26 17:47:50,921 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:47:50,925 basehttp 161 "GET /imagecode/?uuid=6f528f45-6b28-4299-927c-fe66be66c66e HTTP/1.1" 500 116294
+ERROR 2021-09-26 17:47:55,550 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:47:55,552 basehttp 161 "GET /imagecode/?uuid=97e65829-7000-4b82-b910-c6bf9afaef0a HTTP/1.1" 500 116307
+WARNING 2021-09-26 17:47:59,408 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-26 17:47:59,417 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-26 17:47:59,418 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+ERROR 2021-09-26 17:47:59,718 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:47:59,719 basehttp 161 "GET /imagecode/?uuid=85a418c6-296e-438c-ab79-87d5b35a9f28 HTTP/1.1" 500 116313
+ERROR 2021-09-26 17:48:04,901 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:48:04,902 basehttp 161 "GET /imagecode/?uuid=3204b1b6-4ff3-4667-b9fe-794c2b9dba20 HTTP/1.1" 500 116314
+ERROR 2021-09-26 17:48:11,758 log 224 Internal Server Error: /imagecode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 39, in get
+    redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-26 17:48:11,760 basehttp 161 "GET /imagecode/?uuid=3204b1b6-4ff3-4667-b9fe-794c2b9dba20 HTTP/1.1" 500 116689
+INFO 2021-09-26 17:49:16,458 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-26 17:49:19,714 log 224 Not Found: /
+WARNING 2021-09-26 17:49:19,714 basehttp 161 "GET / HTTP/1.1" 404 2296
+WARNING 2021-09-26 17:49:19,834 log 224 Not Found: /favicon.ico
+WARNING 2021-09-26 17:49:19,835 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2347
+INFO 2021-09-26 17:49:23,192 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 17:49:24,026 basehttp 161 "GET /imagecode/?uuid=d9a84a98-93e4-458c-bd81-531f7a87508c HTTP/1.1" 200 2960
+INFO 2021-09-26 17:49:26,172 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-26 17:49:26,226 basehttp 161 "GET /imagecode/?uuid=2cad3ac1-1244-4439-a48a-1c03048c6de5 HTTP/1.1" 200 3528
+INFO 2021-09-27 08:00:29,807 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-27 08:00:34,109 log 224 Not Found: /
+WARNING 2021-09-27 08:00:34,124 basehttp 161 "GET / HTTP/1.1" 404 2296
+WARNING 2021-09-27 08:00:34,295 log 224 Not Found: /favicon.ico
+WARNING 2021-09-27 08:00:34,295 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2347
+INFO 2021-09-27 08:00:38,908 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 08:00:38,932 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,932 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,940 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,940 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,948 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,948 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,948 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:38,948 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-27 08:00:41,800 basehttp 161 "GET /imagecode/?uuid=6db99af9-5643-419e-baa9-6ee11c5a6323 HTTP/1.1" 200 3674
+INFO 2021-09-27 08:14:05,907 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 08:14:06,130 basehttp 161 "GET /imagecode/?uuid=86036a28-c058-4c8d-b2b8-9ea41a7bcaa2 HTTP/1.1" 200 3306
+INFO 2021-09-27 08:15:04,076 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-27 08:15:06,551 log 224 Not Found: /
+WARNING 2021-09-27 08:15:06,559 basehttp 161 "GET / HTTP/1.1" 404 2296
+INFO 2021-09-27 08:15:12,818 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 08:15:14,183 basehttp 161 "GET /imagecode/?uuid=c1dc6bc3-9d22-483b-ab2a-85c3ccb883a1 HTTP/1.1" 200 3037
+INFO 2021-09-27 08:15:18,270 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 08:15:18,510 basehttp 161 "GET /imagecode/?uuid=3450672e-daea-4425-98a5-b2dc2f630670 HTTP/1.1" 200 3091
+INFO 2021-09-27 08:16:49,368 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 08:16:51,253 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 08:17:17,073 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 08:17:18,728 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 08:19:30,586 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 08:19:32,267 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 08:23:10,964 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 08:23:12,515 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:32:48,091 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:33:05,532 autoreload 250 D:\桌面\shixun\shixunblog\libs\tongxun\sms.py changed, reloading.
+INFO 2021-09-27 09:33:06,489 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:33:18,074 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-27 09:33:21,511 log 224 Not Found: /
+WARNING 2021-09-27 09:33:21,514 basehttp 161 "GET / HTTP/1.1" 404 2296
+INFO 2021-09-27 09:33:24,875 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 09:33:26,843 basehttp 161 "GET /imagecode/?uuid=281a7951-1d71-48cb-ae12-0d4217fe510f HTTP/1.1" 200 3010
+WARNING 2021-09-27 09:33:36,513 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:33:36,514 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=W3BL&uuid=281a7951-1d71-48cb-ae12-0d4217fe510f HTTP/1.1" 404 2423
+WARNING 2021-09-27 09:33:40,066 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:33:40,066 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=W3BL&uuid=281a7951-1d71-48cb-ae12-0d4217fe510f HTTP/1.1" 404 2423
+WARNING 2021-09-27 09:33:49,795 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:33:49,796 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=W3BL&uuid=281a7951-1d71-48cb-ae12-0d4217fe510f HTTP/1.1" 404 2423
+WARNING 2021-09-27 09:34:06,356 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:34:06,357 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=W3BL&uuid=281a7951-1d71-48cb-ae12-0d4217fe510f HTTP/1.1" 404 2423
+INFO 2021-09-27 09:34:15,549 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 09:34:15,640 basehttp 161 "GET /imagecode/?uuid=3d72e7e8-ec19-4aa8-aa94-e685f6abae65 HTTP/1.1" 200 3672
+WARNING 2021-09-27 09:34:37,959 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:34:37,960 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=KVFW&uuid=3d72e7e8-ec19-4aa8-aa94-e685f6abae65 HTTP/1.1" 404 2423
+INFO 2021-09-27 09:35:41,203 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:35:51,564 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 09:35:51,694 basehttp 161 "GET /imagecode/?uuid=d51e42c4-23e7-4bcc-9ad4-e10d2b5c2cae HTTP/1.1" 200 3259
+WARNING 2021-09-27 09:36:06,642 log 224 Not Found: /smscode/
+WARNING 2021-09-27 09:36:06,643 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=E4ZR&uuid=d51e42c4-23e7-4bcc-9ad4-e10d2b5c2cae HTTP/1.1" 404 2423
+INFO 2021-09-27 09:36:58,978 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 09:36:59,894 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:38:32,393 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:40:51,201 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 09:40:57,327 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 09:40:57,584 basehttp 161 "GET /imagecode/?uuid=067595a5-89a4-4b68-b62f-9ac02ded0a97 HTTP/1.1" 200 3236
+INFO 2021-09-27 09:41:08,352 views 164 短信验证码: 223994
+INFO 2021-09-27 09:41:08,674 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=CS6V&uuid=067595a5-89a4-4b68-b62f-9ac02ded0a97 HTTP/1.1" 200 63
