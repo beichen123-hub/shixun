@@ -34,5 +34,7 @@ urlpatterns = [
     # path('', test_log)
     # include 参数1 要设置为元组（urlconf_module, app_name）。urlconf_module：子应用路由；app_name：子应用名
     # include 参数2 namespace 设置命名空间。这里设置为子应用名
-    path('', include(('users.urls', 'users'), namespace='users'))
+    path('', include(('users.urls', 'users'), namespace='users')),
+    # 主页路由
+    path('', include(('home.urls', 'home'), namespace='home'))
 ]

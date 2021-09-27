@@ -714,3 +714,99 @@ INFO 2021-09-27 09:40:57,327 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
 INFO 2021-09-27 09:40:57,584 basehttp 161 "GET /imagecode/?uuid=067595a5-89a4-4b68-b62f-9ac02ded0a97 HTTP/1.1" 200 3236
 INFO 2021-09-27 09:41:08,352 views 164 短信验证码: 223994
 INFO 2021-09-27 09:41:08,674 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=CS6V&uuid=067595a5-89a4-4b68-b62f-9ac02ded0a97 HTTP/1.1" 200 63
+INFO 2021-09-27 10:28:27,621 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 10:28:31,765 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 10:28:32,034 basehttp 161 "GET /imagecode/?uuid=99fc04ff-2ade-477e-bc90-3c8bc0c60130 HTTP/1.1" 200 2892
+INFO 2021-09-27 10:28:58,152 views 164 短信验证码: 921897
+INFO 2021-09-27 10:29:03,467 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=DIEQ&uuid=99fc04ff-2ade-477e-bc90-3c8bc0c60130 HTTP/1.1" 200 63
+INFO 2021-09-27 10:29:15,224 basehttp 161 "POST /register/ HTTP/1.1" 200 12
+INFO 2021-09-27 10:29:20,329 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 10:29:20,439 basehttp 161 "GET /imagecode/?uuid=5f489432-6fd6-46db-91f0-3c8a1764f56b HTTP/1.1" 200 3259
+INFO 2021-09-27 10:41:23,717 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-27 10:41:27,177 log 224 Not Found: /
+WARNING 2021-09-27 10:41:27,178 basehttp 161 "GET / HTTP/1.1" 404 2467
+INFO 2021-09-27 10:41:32,141 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 10:41:33,508 basehttp 161 "GET /imagecode/?uuid=d5fc3dab-d49e-4b50-a8f5-f1f2ccb5d6c9 HTTP/1.1" 200 3425
+INFO 2021-09-27 10:42:16,459 views 164 短信验证码: 110491
+INFO 2021-09-27 10:42:21,369 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=UJWU&uuid=d5fc3dab-d49e-4b50-a8f5-f1f2ccb5d6c9 HTTP/1.1" 200 63
+INFO 2021-09-27 10:42:53,433 basehttp 161 "POST /register/ HTTP/1.1" 200 12
+INFO 2021-09-27 11:18:56,512 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:19:00,546 basehttp 161 "GET / HTTP/1.1" 200 16150
+WARNING 2021-09-27 11:19:00,716 log 224 Not Found: /bootstrap/css/bootstrap.min.css
+WARNING 2021-09-27 11:19:00,718 log 224 Not Found: /bootstrap/js/bootstrap.min.js
+WARNING 2021-09-27 11:19:00,719 log 224 Not Found: /css/cl-css.css
+WARNING 2021-09-27 11:19:00,720 log 224 Not Found: /highlight/styles/railscasts.css
+WARNING 2021-09-27 11:19:00,721 log 224 Not Found: /font-awesome/css/font-awesome.min.css
+WARNING 2021-09-27 11:19:00,722 basehttp 161 "GET /bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,722 basehttp 161 "GET /bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2739
+WARNING 2021-09-27 11:19:00,724 log 224 Not Found: /jquery/jquery.min.js
+WARNING 2021-09-27 11:19:00,724 basehttp 161 "GET /css/cl-css.css HTTP/1.1" 404 2688
+WARNING 2021-09-27 11:19:00,724 basehttp 161 "GET /highlight/styles/railscasts.css HTTP/1.1" 404 2739
+WARNING 2021-09-27 11:19:00,725 basehttp 161 "GET /font-awesome/css/font-awesome.min.css HTTP/1.1" 404 2757
+WARNING 2021-09-27 11:19:00,746 log 224 Not Found: /img/logo.jpg
+WARNING 2021-09-27 11:19:00,750 basehttp 161 "GET /img/logo.jpg HTTP/1.1" 404 2682
+WARNING 2021-09-27 11:19:00,755 log 224 Not Found: /temporary-img/recommended-right.jpg
+WARNING 2021-09-27 11:19:00,757 basehttp 161 "GET /temporary-img/recommended-right.jpg HTTP/1.1" 404 2751
+WARNING 2021-09-27 11:19:00,763 log 224 Not Found: /highlight/highlight.pack.js
+WARNING 2021-09-27 11:19:00,764 basehttp 161 "GET /highlight/highlight.pack.js HTTP/1.1" 404 2727
+WARNING 2021-09-27 11:19:00,767 basehttp 161 "GET /jquery/jquery.min.js HTTP/1.1" 404 2706
+WARNING 2021-09-27 11:19:00,797 log 224 Not Found: /temporary-img/recommended.jpg
+WARNING 2021-09-27 11:19:00,802 log 224 Not Found: /temporary-img/recommended-left.jpg
+WARNING 2021-09-27 11:19:00,803 log 224 Not Found: /temporary-img/list-image3.jpg
+WARNING 2021-09-27 11:19:00,803 log 224 Not Found: /temporary-img/code.jpg
+WARNING 2021-09-27 11:19:00,804 log 224 Not Found: /temporary-img/list-image2.jpg
+WARNING 2021-09-27 11:19:00,805 basehttp 161 "GET /temporary-img/recommended.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,806 basehttp 161 "GET /temporary-img/recommended-left.jpg HTTP/1.1" 404 2748
+WARNING 2021-09-27 11:19:00,806 basehttp 161 "GET /temporary-img/list-image3.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,807 log 224 Not Found: /temporary-img/list-image1.jpg
+WARNING 2021-09-27 11:19:00,808 basehttp 161 "GET /temporary-img/code.jpg HTTP/1.1" 404 2712
+WARNING 2021-09-27 11:19:00,808 basehttp 161 "GET /temporary-img/list-image2.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,814 basehttp 161 "GET /temporary-img/list-image1.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,816 log 224 Not Found: /temporary-img/list-right.jpg
+WARNING 2021-09-27 11:19:00,816 basehttp 161 "GET /temporary-img/list-right.jpg HTTP/1.1" 404 2730
+WARNING 2021-09-27 11:19:00,853 log 224 Not Found: /bootstrap/js/bootstrap.min.js
+WARNING 2021-09-27 11:19:00,855 basehttp 161 "GET /bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:00,862 log 224 Not Found: /highlight/highlight.pack.js
+WARNING 2021-09-27 11:19:00,862 basehttp 161 "GET /highlight/highlight.pack.js HTTP/1.1" 404 2727
+INFO 2021-09-27 11:19:14,588 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 11:19:15,708 basehttp 161 "GET /imagecode/?uuid=46a285ec-0fa5-461a-8ee1-33f6af3de148 HTTP/1.1" 200 2995
+INFO 2021-09-27 11:19:33,312 views 164 短信验证码: 026263
+INFO 2021-09-27 11:19:38,411 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=ERP8&uuid=46a285ec-0fa5-461a-8ee1-33f6af3de148 HTTP/1.1" 200 63
+INFO 2021-09-27 11:19:42,204 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-09-27 11:19:42,212 basehttp 161 "GET / HTTP/1.1" 200 16150
+WARNING 2021-09-27 11:19:42,243 log 224 Not Found: /bootstrap/css/bootstrap.min.css
+WARNING 2021-09-27 11:19:42,244 log 224 Not Found: /css/cl-css.css
+WARNING 2021-09-27 11:19:42,245 log 224 Not Found: /font-awesome/css/font-awesome.min.css
+WARNING 2021-09-27 11:19:42,245 log 224 Not Found: /jquery/jquery.min.js
+WARNING 2021-09-27 11:19:42,246 log 224 Not Found: /bootstrap/js/bootstrap.min.js
+WARNING 2021-09-27 11:19:42,247 log 224 Not Found: /highlight/styles/railscasts.css
+WARNING 2021-09-27 11:19:42,248 basehttp 161 "GET /css/cl-css.css HTTP/1.1" 404 2688
+WARNING 2021-09-27 11:19:42,249 basehttp 161 "GET /bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2739
+WARNING 2021-09-27 11:19:42,249 basehttp 161 "GET /font-awesome/css/font-awesome.min.css HTTP/1.1" 404 2757
+WARNING 2021-09-27 11:19:42,249 basehttp 161 "GET /jquery/jquery.min.js HTTP/1.1" 404 2706
+WARNING 2021-09-27 11:19:42,250 basehttp 161 "GET /highlight/styles/railscasts.css HTTP/1.1" 404 2739
+WARNING 2021-09-27 11:19:42,250 basehttp 161 "GET /bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:42,269 log 224 Not Found: /highlight/highlight.pack.js
+WARNING 2021-09-27 11:19:42,269 basehttp 161 "GET /highlight/highlight.pack.js HTTP/1.1" 404 2727
+WARNING 2021-09-27 11:19:42,270 log 224 Not Found: /temporary-img/recommended-right.jpg
+WARNING 2021-09-27 11:19:42,270 log 224 Not Found: /temporary-img/list-image1.jpg
+WARNING 2021-09-27 11:19:42,271 log 224 Not Found: /img/logo.jpg
+WARNING 2021-09-27 11:19:42,274 log 224 Not Found: /temporary-img/recommended-left.jpg
+WARNING 2021-09-27 11:19:42,274 log 224 Not Found: /temporary-img/recommended.jpg
+WARNING 2021-09-27 11:19:42,276 basehttp 161 "GET /img/logo.jpg HTTP/1.1" 404 2682
+WARNING 2021-09-27 11:19:42,276 basehttp 161 "GET /temporary-img/list-image1.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:42,277 basehttp 161 "GET /temporary-img/recommended-left.jpg HTTP/1.1" 404 2748
+WARNING 2021-09-27 11:19:42,277 basehttp 161 "GET /temporary-img/recommended-right.jpg HTTP/1.1" 404 2751
+WARNING 2021-09-27 11:19:42,280 log 224 Not Found: /bootstrap/js/bootstrap.min.js
+WARNING 2021-09-27 11:19:42,283 basehttp 161 "GET /temporary-img/recommended.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:42,290 basehttp 161 "GET /bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:42,295 log 224 Not Found: /temporary-img/list-image2.jpg
+WARNING 2021-09-27 11:19:42,296 log 224 Not Found: /temporary-img/code.jpg
+WARNING 2021-09-27 11:19:42,297 log 224 Not Found: /temporary-img/list-right.jpg
+WARNING 2021-09-27 11:19:42,299 log 224 Not Found: /highlight/highlight.pack.js
+WARNING 2021-09-27 11:19:42,300 basehttp 161 "GET /temporary-img/list-image2.jpg HTTP/1.1" 404 2733
+WARNING 2021-09-27 11:19:42,301 log 224 Not Found: /temporary-img/list-image3.jpg
+WARNING 2021-09-27 11:19:42,301 basehttp 161 "GET /temporary-img/code.jpg HTTP/1.1" 404 2712
+WARNING 2021-09-27 11:19:42,302 basehttp 161 "GET /temporary-img/list-right.jpg HTTP/1.1" 404 2730
+WARNING 2021-09-27 11:19:42,303 basehttp 161 "GET /highlight/highlight.pack.js HTTP/1.1" 404 2727
+WARNING 2021-09-27 11:19:42,304 basehttp 161 "GET /temporary-img/list-image3.jpg HTTP/1.1" 404 2733
