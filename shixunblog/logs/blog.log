@@ -810,3 +810,49 @@ WARNING 2021-09-27 11:19:42,301 basehttp 161 "GET /temporary-img/code.jpg HTTP/1
 WARNING 2021-09-27 11:19:42,302 basehttp 161 "GET /temporary-img/list-right.jpg HTTP/1.1" 404 2730
 WARNING 2021-09-27 11:19:42,303 basehttp 161 "GET /highlight/highlight.pack.js HTTP/1.1" 404 2727
 WARNING 2021-09-27 11:19:42,304 basehttp 161 "GET /temporary-img/list-image3.jpg HTTP/1.1" 404 2733
+INFO 2021-09-27 11:35:22,078 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:35:24,753 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-27 11:35:24,794 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,794 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,798 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,798 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,799 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,803 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,804 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,804 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:24,912 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+INFO 2021-09-27 11:35:36,943 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-27 11:35:59,462 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-27 11:36:00,615 basehttp 161 "GET /imagecode/?uuid=738bc400-b397-4bfc-9b95-d97f05a4c09a HTTP/1.1" 200 3465
+INFO 2021-09-27 11:38:22,535 basehttp 161 "GET /imagecode/?uuid=7fd6987e-6edc-45f8-a167-8e94d844b937 HTTP/1.1" 200 3129
+INFO 2021-09-27 11:38:41,696 views 167 短信验证码: 672111
+INFO 2021-09-27 11:38:46,842 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=5HKO&uuid=7fd6987e-6edc-45f8-a167-8e94d844b937 HTTP/1.1" 200 63
+WARNING 2021-09-27 11:38:52,580 log 224 Bad Request: /register/
+WARNING 2021-09-27 11:38:52,581 basehttp 161 "POST /register/ HTTP/1.1" 400 30
+INFO 2021-09-27 11:38:54,171 basehttp 161 "GET /imagecode/?uuid=ed62ec6c-3fd2-4549-b582-c2e29fe2a6bc HTTP/1.1" 200 2826
+INFO 2021-09-27 11:39:07,410 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-09-27 11:39:07,418 basehttp 161 "GET / HTTP/1.1" 200 16722
+WARNING 2021-09-27 11:39:13,996 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-27 11:39:13,998 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-27 11:42:59,183 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 11:43:03,741 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:44:39,801 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 11:44:41,038 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:45:27,768 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 11:45:28,757 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:49:22,763 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-27 11:49:23,949 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:49:33,375 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-27 11:49:55,619 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+WARNING 2021-09-27 11:49:56,047 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-27 11:49:56,047 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-27 11:49:56,049 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-27 11:49:56,189 basehttp 161 "GET /imagecode/?uuid=7ed0e120-da46-4c26-af03-2d533274967a HTTP/1.1" 200 3376
+INFO 2021-09-27 11:50:26,919 views 172 短信验证码: 890557
+INFO 2021-09-27 11:50:32,014 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=GRKC&uuid=7ed0e120-da46-4c26-af03-2d533274967a HTTP/1.1" 200 63
+INFO 2021-09-27 11:50:35,250 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-09-27 11:50:35,287 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-27 11:51:21,762 basehttp 161 "GET /static/calmlog-details.html HTTP/1.1" 200 12931
+INFO 2021-09-27 11:51:21,796 basehttp 161 "GET /static/img/portrait.png HTTP/1.1" 200 12233
+INFO 2021-09-27 11:51:21,855 basehttp 161 "GET /static/temporary-img/artical-img2.jpg HTTP/1.1" 200 3097845
+INFO 2021-09-27 11:51:21,866 basehttp 161 "GET /static/temporary-img/artical-img1.jpg HTTP/1.1" 200 572306
