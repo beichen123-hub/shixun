@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="../static/highlight/styles/railscasts.css">
 </head>
 <body>
-<div class="cl-header container-fluid">
+<div class="cl-header container-fluid" id="app">
     <div class="header-content container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.html">
@@ -36,6 +37,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">关于</a>
+                    <!-- 如果用户已经登录，则显示用户名下拉框 -->
+                    <li class="nav-item dropdown" v-if="is_login">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @click="show_menu_click">[[username]]</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="display: block" v-show="show_menu">
+                            <a class="dropdown-item" href="../static/write_blog.html">写文章</a>
+                            <a class="dropdown-item" href='../static/center.html'>个人信息</a>
+                            <a class="dropdown-item" href='{% url 'users:logout' %}'>退出登录</a>
+                        </div>
+                    </li>>
+                    <!-- 如果用户未登录，则显示登录按钮 -->
+                    <li class="nav-item" v-else>
+                        <a class="nav-link" href="login.html">登录</a>
                     </li>
                 </ul>
             </div>
@@ -267,9 +280,14 @@
         <p class="cl-copyright">copyright @ 2017~2018 简.工作室（www.jeanstudio.cn）</p>
     </div>
 </div>
-<script src="../static/jquery/jquery.min.js"></script>
-<script src="../static/bootstrap/js/bootstrap.min.js"></script>
-<script src="../static/highlight/highlight.pack.js"></script>
+<script src="{% static 'jquery/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'highlight/highlight.pack.js' %}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script src="{% static 'vue/vue-2.5.16.js' %}"></script>
+<script src="{% static 'js/host.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/index.js' %}"></script>
 </body>
+<div class="cl-header container-fluid" id="app"></div>
 </html>

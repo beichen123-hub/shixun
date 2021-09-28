@@ -1207,3 +1207,374 @@ WARNING 2021-09-28 10:56:22,224 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 284
 INFO 2021-09-28 10:56:55,701 basehttp 161 "POST / HTTP/1.1" 200 4228
 INFO 2021-09-28 11:00:13,059 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
 INFO 2021-09-28 11:00:14,365 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:32:36,430 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:33:11,411 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:33:13,088 basehttp 161 "GET / HTTP/1.1" 200 17093
+INFO 2021-09-28 11:33:13,160 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 655
+INFO 2021-09-28 11:33:13,183 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2021-09-28 11:33:18,132 basehttp 161 "GET /login/ HTTP/1.1" 200 4207
+INFO 2021-09-28 11:33:26,384 basehttp 161 "POST /login/ HTTP/1.1" 302 0
+INFO 2021-09-28 11:33:26,390 basehttp 161 "GET / HTTP/1.1" 200 17093
+WARNING 2021-09-28 11:33:45,583 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 11:33:45,586 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 11:36:14,593 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:36:15,621 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:40:01,729 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:40:02,855 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:42:09,182 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:42:10,292 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:44:33,298 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:44:37,664 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:45:02,103 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:45:03,297 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:45:13,863 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 11:45:14,816 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:51:14,871 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 11:51:15,885 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:53:34,820 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 11:53:38,554 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:54:37,766 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 11:54:38,753 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:55:38,797 autoreload 250 D:\桌面\shixun\shixunblog\users\urls.py changed, reloading.
+INFO 2021-09-28 11:55:39,830 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:56:03,907 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:56:09,366 basehttp 161 "GET / HTTP/1.1" 200 17978
+WARNING 2021-09-28 11:56:29,548 log 224 Not Found: /login.html
+WARNING 2021-09-28 11:56:29,549 basehttp 161 "GET /login.html HTTP/1.1" 404 3012
+WARNING 2021-09-28 11:56:30,983 log 224 Not Found: /login.html
+WARNING 2021-09-28 11:56:30,984 basehttp 161 "GET /login.html HTTP/1.1" 404 3012
+INFO 2021-09-28 11:58:19,714 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 11:58:22,919 basehttp 161 "GET / HTTP/1.1" 200 17978
+WARNING 2021-09-28 11:58:27,291 log 224 Not Found: /login.html
+WARNING 2021-09-28 11:58:27,292 basehttp 161 "GET /login.html HTTP/1.1" 404 3012
+INFO 2021-09-28 11:58:59,207 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 12:00:32,204 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-28 12:00:34,104 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 7, in get
+    return render(request,'index.html')
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2021-09-28 12:00:34,110 basehttp 161 "GET / HTTP/1.1" 500 135223
+INFO 2021-09-28 12:01:06,589 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-28 12:01:08,376 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 7, in get
+    return render(request,'index.html')
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login/' not found. 'login/' is not a valid view function or pattern name.
+ERROR 2021-09-28 12:01:08,380 basehttp 161 "GET / HTTP/1.1" 500 135244
+INFO 2021-09-28 13:34:50,279 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-28 13:35:14,060 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 7, in get
+    return render(request,'index.html')
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login/' not found. 'login/' is not a valid view function or pattern name.
+ERROR 2021-09-28 13:35:14,066 basehttp 161 "GET / HTTP/1.1" 500 134715
+WARNING 2021-09-28 13:35:14,342 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 13:35:14,343 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2021-09-28 13:37:07,766 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 13:37:08,719 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 13:49:21,540 basehttp 161 "GET / HTTP/1.1" 200 17970
+WARNING 2021-09-28 13:49:21,944 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 13:49:21,944 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+WARNING 2021-09-28 13:49:43,961 log 224 Not Found: /{}
+WARNING 2021-09-28 13:49:43,962 basehttp 161 "GET /%7B%7D HTTP/1.1" 404 3164
+INFO 2021-09-28 13:50:40,938 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 13:50:43,384 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:50:44,740 basehttp 161 "GET /login.html HTTP/1.1" 301 0
+INFO 2021-09-28 13:50:44,820 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+ERROR 2021-09-28 13:51:39,805 log 224 Internal Server Error: /login.html/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 27, in _decorator
+    return method(self, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 131, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\client\default.py", line 511, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 199, in post
+    login(request, return_user)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\__init__.py", line 111, in login
+    request.session.cycle_key()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\base.py", line 344, in cycle_key
+    self.create()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\base.py", line 196, in _get_new_session_key
+    if not self.exists(session_key):
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\cache\backends\base.py", line 212, in __contains__
+    return self.has_key(key)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 34, in _decorator
+    raise e.__cause__
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\client\default.py", line 509, in has_key
+    return client.exists(key) == 1
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1581, in exists
+    return self.execute_command('EXISTS', *names)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-28 13:51:39,811 basehttp 161 "POST /login.html/ HTTP/1.1" 500 144862
+INFO 2021-09-28 13:51:46,595 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 13:52:30,031 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 13:52:38,112 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:38,119 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:41,746 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:41,754 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:43,029 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:43,037 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:43,476 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:43,484 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:45,780 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:54,370 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:54,379 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:54,994 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:55,000 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:52:55,811 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:52:55,817 basehttp 161 "GET / HTTP/1.1" 200 17978
+INFO 2021-09-28 13:57:04,240 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 13:57:06,486 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 13:57:06,908 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 13:57:06,909 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2021-09-28 13:57:13,921 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 13:57:23,556 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:57:23,563 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 13:57:27,032 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:57:27,038 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 13:57:28,678 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 13:57:36,461 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:57:36,468 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 13:57:41,440 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 13:57:41,447 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 14:02:28,121 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 14:02:29,267 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:05:08,802 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 14:05:09,807 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:05:14,647 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 14:05:14,989 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 14:05:14,989 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2021-09-28 14:05:16,913 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:05:24,954 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:05:24,961 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 14:05:27,095 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:05:27,098 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:09:22,402 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:09:26,589 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 14:09:26,634 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 655
+INFO 2021-09-28 14:09:26,643 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2021-09-28 14:09:26,667 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 200 27041
+INFO 2021-09-28 14:09:26,684 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 200 21441
+INFO 2021-09-28 14:09:26,690 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 200 170949
+INFO 2021-09-28 14:09:26,702 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 200 32481
+INFO 2021-09-28 14:09:26,704 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 200 46773
+INFO 2021-09-28 14:09:26,704 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 200 30796
+INFO 2021-09-28 14:09:26,705 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 200 57923
+INFO 2021-09-28 14:09:26,705 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 200 43034
+INFO 2021-09-28 14:09:26,782 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+WARNING 2021-09-28 14:09:26,948 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 14:09:26,948 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2021-09-28 14:09:29,374 basehttp 161 "GET /login.html HTTP/1.1" 301 0
+INFO 2021-09-28 14:09:29,412 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:09:36,333 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:09:36,339 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 14:09:39,195 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:09:39,279 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:11:02,328 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-28 14:11:02,947 basehttp 161 "GET /imagecode/?uuid=102a7e77-053a-4983-a45e-67a05980ff33 HTTP/1.1" 200 2960
+WARNING 2021-09-28 14:11:02,958 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 14:11:02,958 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3187
+INFO 2021-09-28 14:11:07,356 basehttp 161 "GET /login/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:11:14,931 basehttp 161 "GET /login/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:11:20,293 basehttp 161 "GET /login/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:11:23,928 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 14:11:26,092 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+WARNING 2021-09-28 14:11:33,448 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:11:33,453 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-28 14:11:33,453 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:12:06,312 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:12:06,319 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 14:12:06,383 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:12:06,418 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:25:24,782 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:25:32,129 basehttp 161 "GET / HTTP/1.1" 200 17984
+INFO 2021-09-28 14:25:34,184 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+INFO 2021-09-28 14:25:42,702 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:25:42,710 basehttp 161 "GET / HTTP/1.1" 200 17984
+WARNING 2021-09-28 14:25:46,343 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:25:46,344 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:27:53,297 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 14:27:56,278 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:27:58,188 basehttp 161 "GET / HTTP/1.1" 200 17806
+WARNING 2021-09-28 14:27:58,504 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:27:58,504 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:33:34,922 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:33:38,480 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:38,547 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:38,577 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:39,982 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:40,043 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:40,090 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:40,606 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:40,673 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:40,707 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,023 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,094 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:41,122 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,202 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,271 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:41,301 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,377 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,455 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:41,490 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,553 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,640 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:41,671 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,729 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,816 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:41,843 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:41,889 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:41,968 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,002 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:42,043 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:42,126 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,157 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:42,203 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:42,284 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,332 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:42,396 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:42,463 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,489 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:42,581 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:42,640 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,672 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:42,753 basehttp 161 "GET / HTTP/1.1" 200 17815
+WARNING 2021-09-28 14:33:42,809 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:42,839 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:33:57,211 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 14:33:58,391 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:33:58,692 basehttp 161 "GET / HTTP/1.1" 200 17993
+WARNING 2021-09-28 14:33:58,747 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:33:58,764 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:34:03,695 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:34:03,703 basehttp 161 "GET / HTTP/1.1" 200 17993
+WARNING 2021-09-28 14:34:03,763 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:34:03,802 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:34:11,441 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:34:11,446 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 14:35:08,150 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-28 14:35:09,280 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 14:35:09,485 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-28 14:35:09,563 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:35:09,728 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:35:11,329 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4207
+WARNING 2021-09-28 14:35:11,387 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:35:11,407 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 14:35:11,451 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-28 14:35:20,867 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:35:20,874 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-28 14:35:20,939 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:35:20,968 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 14:35:24,474 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 14:35:24,482 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-28 14:35:24,538 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 14:35:24,566 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727

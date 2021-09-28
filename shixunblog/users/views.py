@@ -12,7 +12,7 @@ import re   # 导入正则表达式包
 from users.models import User   # 导入用户包
 from django.db import DataError # 导入数据库异常包
 from django.urls import reverse
-from django.contrib.auth import login,authenticate
+from django.contrib.auth import login,authenticate,logout
 
 logger = logging.getLogger("django")
 
@@ -208,4 +208,12 @@ class loginView(View):
             resp.set_cookie('is_login',True, max_age=24*3600*14)
             resp.set_cookie('Login_name', return_user.username, max_age=24*3600*14)
             request.session.set_expiry(None)  # 表示设置默认时长,默认就是2周时间
+        return resp
+
+class logoutView(View):
+    def get(self,request):
+        logout(request)
+        resp = redirect(reverse('home:index'))
+        resp.delete_cookie('is_login')
+        resp.delete_cookie('login_name')
         return resp

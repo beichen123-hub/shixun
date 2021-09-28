@@ -21,5 +21,7 @@ urlpatterns = [
     path('imagecode/',ImageView.as_view(), name='imagecode'),
     # 短信验证码
     path('smscode/',SmsCodeView.as_view(), name='smscode'),
-    path('',loginView.as_view(), name='login')
+    path('login/',loginView.as_view(), name='login'),
+    path('login.html/',loginView.as_view(), name='login'),
+    path('logout/',logoutView.as_view(), name='logout')
 ]
