@@ -18,6 +18,7 @@ class User(AbstractUser):
     # 简介信息
     # max_length:简介长度500；blank：用户简介不是必填项
     user_desc = models.CharField(max_length=500, blank=True)
+    USERNAME_FIELD = "mobile"
 
     class Meta:
         db_table = 'tb_users'  # 修改表名

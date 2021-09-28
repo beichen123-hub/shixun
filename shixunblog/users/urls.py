@@ -9,9 +9,8 @@
 # project name:shixunblog
 # 子应用路由
 from django.urls import path
-from users.views import RegisterView # 导入注册视图
-from users.views import ImageView # 导入验证码视图
-from users.views import SmsCodeView # 导入短信验证码视图
+from users.views import * # 导入注册视图
+
 
 urlpatterns = [
     # 参数1：路由
@@ -21,5 +20,6 @@ urlpatterns = [
     # 图片验证码路由
     path('imagecode/',ImageView.as_view(), name='imagecode'),
     # 短信验证码
-    path('smscode/',SmsCodeView.as_view(), name='smscode')
+    path('smscode/',SmsCodeView.as_view(), name='smscode'),
+    path('',loginView.as_view(), name='login')
 ]

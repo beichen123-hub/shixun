@@ -13,6 +13,6 @@ from home.views import IndexView # 导入注册视图
 
 urlpatterns = [
 
-    path('',IndexView.as_view(), name='index'),
+    path('index/',IndexView.as_view(), name='index'),
 
 ]

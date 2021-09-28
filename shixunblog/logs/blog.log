@@ -856,3 +856,347 @@ INFO 2021-09-27 11:51:21,762 basehttp 161 "GET /static/calmlog-details.html HTTP
 INFO 2021-09-27 11:51:21,796 basehttp 161 "GET /static/img/portrait.png HTTP/1.1" 200 12233
 INFO 2021-09-27 11:51:21,855 basehttp 161 "GET /static/temporary-img/artical-img2.jpg HTTP/1.1" 200 3097845
 INFO 2021-09-27 11:51:21,866 basehttp 161 "GET /static/temporary-img/artical-img1.jpg HTTP/1.1" 200 572306
+INFO 2021-09-28 08:20:49,432 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:21:31,367 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 08:21:31,416 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,416 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,425 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,430 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,469 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,471 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,472 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,474 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,494 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,495 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,495 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,496 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,498 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,504 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,505 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,505 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 08:21:31,660 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+WARNING 2021-09-28 08:21:31,832 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 08:21:31,833 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2679
+INFO 2021-09-28 08:21:37,240 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-28 08:21:37,626 basehttp 161 "GET /imagecode/?uuid=231fcb39-dfe1-40c2-b058-a10d4ca251df HTTP/1.1" 200 3279
+ERROR 2021-09-28 08:22:01,625 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 168, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-09-28 08:22:01,626 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=Y4KY&uuid=231fcb39-dfe1-40c2-b058-a10d4ca251df HTTP/1.1" 500 82346
+INFO 2021-09-28 08:22:04,458 basehttp 161 "GET /imagecode/?uuid=1e7a4f42-a896-4ae6-b182-8e7346d5a2e5 HTTP/1.1" 200 3343
+INFO 2021-09-28 08:22:10,592 views 172 短信验证码: 648884
+INFO 2021-09-28 08:22:16,298 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=OJVW&uuid=1e7a4f42-a896-4ae6-b182-8e7346d5a2e5 HTTP/1.1" 200 63
+INFO 2021-09-28 08:22:24,339 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-09-28 08:22:24,346 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 08:34:44,998 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:36:00,168 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:36:03,536 basehttp 161 "GET / HTTP/1.1" 200 16722
+WARNING 2021-09-28 08:36:03,990 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 08:36:03,990 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2846
+INFO 2021-09-28 08:36:10,330 basehttp 161 "GET /login HTTP/1.1" 301 0
+INFO 2021-09-28 08:36:10,377 basehttp 161 "GET /login/ HTTP/1.1" 200 4359
+INFO 2021-09-28 08:37:09,977 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 08:37:11,100 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:38:47,136 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 08:38:48,128 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:38:48,326 basehttp 161 "GET /login/ HTTP/1.1" 200 3949
+INFO 2021-09-28 08:43:13,093 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 08:43:17,482 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:45:57,606 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 08:45:58,731 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:46:57,920 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 08:46:59,016 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 08:46:59,280 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 08:47:12,124 base 101 Method Not Allowed (POST): /login/
+WARNING 2021-09-28 08:47:12,124 log 224 Method Not Allowed: /login/
+WARNING 2021-09-28 08:47:12,124 basehttp 161 "POST /login/ HTTP/1.1" 405 0
+INFO 2021-09-28 08:47:25,956 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-28 08:47:30,874 base 101 Method Not Allowed (POST): /login/
+WARNING 2021-09-28 08:47:30,874 log 224 Method Not Allowed: /login/
+WARNING 2021-09-28 08:47:30,875 basehttp 161 "POST /login/ HTTP/1.1" 405 0
+WARNING 2021-09-28 08:47:33,632 base 101 Method Not Allowed (POST): /login/
+WARNING 2021-09-28 08:47:33,632 log 224 Method Not Allowed: /login/
+WARNING 2021-09-28 08:47:33,634 basehttp 161 "POST /login/ HTTP/1.1" 405 0
+INFO 2021-09-28 08:47:37,615 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 08:47:45,639 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 08:47:58,816 base 101 Method Not Allowed (POST): /login/
+WARNING 2021-09-28 08:47:58,816 log 224 Method Not Allowed: /login/
+WARNING 2021-09-28 08:47:58,817 basehttp 161 "POST /login/ HTTP/1.1" 405 0
+INFO 2021-09-28 08:48:08,787 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 09:28:31,440 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 09:28:32,707 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 09:37:31,342 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 09:37:32,411 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:22:27,482 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:22:32,351 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:25:17,115 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:25:18,331 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:27:09,281 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:27:10,352 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:29:43,162 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:29:44,254 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:32:44,816 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:32:46,026 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:33:28,415 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:33:29,690 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:33:34,958 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:33:40,150 basehttp 161 "GET / HTTP/1.1" 200 16722
+WARNING 2021-09-28 10:33:40,515 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 10:33:40,516 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2846
+INFO 2021-09-28 10:33:44,157 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+ERROR 2021-09-28 10:33:53,234 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 189, in post
+    if not all(username,password):
+TypeError: all() takes exactly one argument (2 given)
+ERROR 2021-09-28 10:33:53,236 basehttp 161 "POST /login/ HTTP/1.1" 500 81678
+INFO 2021-09-28 10:34:20,501 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:34:21,003 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:34:21,169 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:34:21,353 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:34:21,547 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:34:23,648 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-09-28 10:34:24,068 basehttp 161 "GET /imagecode/?uuid=caad833a-55b5-450c-8b2d-30688690024a HTTP/1.1" 200 3283
+INFO 2021-09-28 10:34:36,369 basehttp 161 "GET /imagecode/?uuid=c277f23f-92b7-483e-9729-b8515e68b8ed HTTP/1.1" 200 3252
+ERROR 2021-09-28 10:34:42,643 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 168, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-09-28 10:34:42,677 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=BP6T&uuid=c277f23f-92b7-483e-9729-b8515e68b8ed HTTP/1.1" 500 82346
+ERROR 2021-09-28 10:34:52,777 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 159, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码已过期'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-09-28 10:34:52,778 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=BP6T&uuid=c277f23f-92b7-483e-9729-b8515e68b8ed HTTP/1.1" 500 82231
+INFO 2021-09-28 10:35:16,737 basehttp 161 "GET /imagecode/?uuid=6bbb4590-42cf-425f-9ad7-cbfc3acb9d9a HTTP/1.1" 200 3209
+INFO 2021-09-28 10:35:17,909 basehttp 161 "GET /imagecode/?uuid=28e89ae5-d7a6-4357-bdea-b22bd57be2ca HTTP/1.1" 200 3272
+INFO 2021-09-28 10:35:18,739 basehttp 161 "GET /imagecode/?uuid=938c7ffd-e06a-4750-9546-9b1baf54570d HTTP/1.1" 200 3335
+INFO 2021-09-28 10:35:24,421 views 172 短信验证码: 836652
+INFO 2021-09-28 10:35:24,912 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=CXPK&uuid=938c7ffd-e06a-4750-9546-9b1baf54570d HTTP/1.1" 200 63
+INFO 2021-09-28 10:35:35,239 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-09-28 10:35:35,245 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 10:35:39,882 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+ERROR 2021-09-28 10:35:48,823 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 189, in post
+    if not all(username,password):
+TypeError: all() takes exactly one argument (2 given)
+ERROR 2021-09-28 10:35:48,824 basehttp 161 "POST /login/ HTTP/1.1" 500 81825
+INFO 2021-09-28 10:36:57,063 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:36:58,244 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-28 10:36:59,719 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:36:59,744 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-28 10:36:59,760 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 10:37:00,414 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:37:00,520 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:37:00,550 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:37:00,553 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-28 10:37:07,136 basehttp 161 "POST /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:37:07,218 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:37:07,260 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:37:07,263 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-28 10:37:24,948 basehttp 161 "POST /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:37:25,051 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:37:25,063 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-28 10:37:25,066 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-28 10:39:22,657 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-28 10:39:30,578 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 200, in post
+    resp=redirect(reverse('home: index'))
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for ' index' not found. ' index' is not a valid view function or pattern name.
+ERROR 2021-09-28 10:39:30,580 basehttp 161 "POST /login/ HTTP/1.1" 500 93330
+INFO 2021-09-28 10:40:30,949 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-28 10:40:33,607 log 224 Forbidden (CSRF token missing or incorrect.): /login/
+WARNING 2021-09-28 10:40:33,607 basehttp 161 "POST /login/ HTTP/1.1" 403 2519
+WARNING 2021-09-28 10:40:34,364 log 224 Forbidden (CSRF token missing or incorrect.): /login/
+WARNING 2021-09-28 10:40:34,365 basehttp 161 "POST /login/ HTTP/1.1" 403 2519
+INFO 2021-09-28 10:40:39,418 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:40:39,542 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:40:39,610 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:40:39,612 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+ERROR 2021-09-28 10:40:46,337 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 203, in post
+    resp.set_cookie('is_ Login', True)
+  File "D:\python_code\code\beichen\lib\site-packages\django\http\response.py", line 203, in set_cookie
+    self.cookies[key] = value
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 495, in __setitem__
+    self.__set(key, rval, cval)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 485, in __set
+    M.set(key, real_value, coded_value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 352, in set
+    raise CookieError('Illegal key %r' % (key,))
+http.cookies.CookieError: Illegal key 'is_ Login'
+ERROR 2021-09-28 10:40:46,339 basehttp 161 "POST /login/ HTTP/1.1" 500 100758
+INFO 2021-09-28 10:40:55,519 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:40:55,587 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:40:55,609 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:40:55,651 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-28 10:40:56,564 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:40:56,607 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:40:56,657 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:40:56,668 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+ERROR 2021-09-28 10:41:02,883 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 203, in post
+    resp.set_cookie('is_ Login', True)
+  File "D:\python_code\code\beichen\lib\site-packages\django\http\response.py", line 203, in set_cookie
+    self.cookies[key] = value
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 495, in __setitem__
+    self.__set(key, rval, cval)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 485, in __set
+    M.set(key, real_value, coded_value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 352, in set
+    raise CookieError('Illegal key %r' % (key,))
+http.cookies.CookieError: Illegal key 'is_ Login'
+ERROR 2021-09-28 10:41:02,884 basehttp 161 "POST /login/ HTTP/1.1" 500 100758
+INFO 2021-09-28 10:41:56,485 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:42:15,817 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-28 10:42:20,173 log 224 Forbidden (CSRF token missing or incorrect.): /login/
+WARNING 2021-09-28 10:42:20,174 basehttp 161 "POST /login/ HTTP/1.1" 403 2519
+WARNING 2021-09-28 10:42:21,165 log 224 Forbidden (CSRF token missing or incorrect.): /login/
+WARNING 2021-09-28 10:42:21,165 basehttp 161 "POST /login/ HTTP/1.1" 403 2519
+INFO 2021-09-28 10:42:23,327 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+WARNING 2021-09-28 10:42:23,391 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 10:42:23,415 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 10:42:23,461 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+ERROR 2021-09-28 10:42:30,373 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 203, in post
+    resp.set_cookie('is_ Login', True)
+  File "D:\python_code\code\beichen\lib\site-packages\django\http\response.py", line 203, in set_cookie
+    self.cookies[key] = value
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 495, in __setitem__
+    self.__set(key, rval, cval)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 485, in __set
+    M.set(key, real_value, coded_value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 352, in set
+    raise CookieError('Illegal key %r' % (key,))
+http.cookies.CookieError: Illegal key 'is_ Login'
+ERROR 2021-09-28 10:42:30,375 basehttp 161 "POST /login/ HTTP/1.1" 500 100758
+INFO 2021-09-28 10:43:30,788 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 10:43:31,740 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:46:38,396 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:46:49,637 basehttp 161 "GET /login HTTP/1.1" 301 0
+INFO 2021-09-28 10:46:49,789 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:46:49,822 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,822 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,822 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,823 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,832 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,836 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,836 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 10:46:49,840 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+WARNING 2021-09-28 10:46:50,181 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 10:46:50,181 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2846
+ERROR 2021-09-28 10:46:57,056 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 203, in post
+    resp.set_cookie('is_ Login', True)
+  File "D:\python_code\code\beichen\lib\site-packages\django\http\response.py", line 203, in set_cookie
+    self.cookies[key] = value
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 495, in __setitem__
+    self.__set(key, rval, cval)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 485, in __set
+    M.set(key, real_value, coded_value)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\http\cookies.py", line 352, in set
+    raise CookieError('Illegal key %r' % (key,))
+http.cookies.CookieError: Illegal key 'is_ Login'
+ERROR 2021-09-28 10:46:57,059 basehttp 161 "POST /login/ HTTP/1.1" 500 100207
+INFO 2021-09-28 10:49:46,631 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:49:51,690 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:49:58,419 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 10:50:01,104 basehttp 161 "GET /login/ HTTP/1.1" 200 4098
+INFO 2021-09-28 10:50:08,045 basehttp 161 "POST /login/ HTTP/1.1" 302 0
+INFO 2021-09-28 10:50:08,052 basehttp 161 "GET / HTTP/1.1" 200 16722
+INFO 2021-09-28 10:52:14,776 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:52:16,377 basehttp 161 "GET / HTTP/1.1" 200 4098

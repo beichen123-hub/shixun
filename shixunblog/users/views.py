@@ -12,7 +12,7 @@ import re   # 导入正则表达式包
 from users.models import User   # 导入用户包
 from django.db import DataError # 导入数据库异常包
 from django.urls import reverse
-from django.contrib.auth import login
+from django.contrib.auth import login,authenticate
 
 logger = logging.getLogger("django")
 
@@ -176,3 +176,36 @@ class SmsCodeView(View):
         CCP().send_template_sms(mobile, [sms_code, 1], 1)
         # 6、短信发送成功返回响应信息
         return JsonResponse({'code': RETCODE.OK, 'errmsg': '短信发送成功'})
+
+
+class loginView(View):
+    def get(self,request):
+        return render(request,"login.html")
+    def post(self,request):
+        username = request.POST.get('mobile')
+        password = request.POST.get('password')
+        remember = request.POST.get('remember')
+
+        if not all([username,password]):
+            return render(request,template_name='login.html',context={'msg':'账号密码不能为空'})
+        if not re.match('^1[3-9]\d{9}$',username):
+            return render(request,template_name='login.html',context={'msg':'手机号码不正确'})
+        if not re.match('^[a-z0-9A]{8,20}$',password):
+            return render(request,template_name='login.html',context={'msg':'密码格式不正确'})
+        return_user = authenticate(mobile=username,password=password)
+        if return_user is None:
+            return render(request, template_name='login.html', context={'msg':'账号或密码错误'})
+
+        login(request, return_user)
+        resp = redirect(reverse('home:index'))
+        # 根据用户选择的是否记住登录状态进行判时
+        if remember != "on":  # 用户没有勾选复选相
+            resp.set_cookie('is_login', True)
+            resp.set_cookie('login_name', return_user.username)
+            request.session.set_expiry(0)
+        else:
+            # 设置2周内的 cookie
+            resp.set_cookie('is_login',True, max_age=24*3600*14)
+            resp.set_cookie('Login_name', return_user.username, max_age=24*3600*14)
+            request.session.set_expiry(None)  # 表示设置默认时长,默认就是2周时间
+        return resp
