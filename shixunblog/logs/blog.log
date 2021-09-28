@@ -1200,3 +1200,10 @@ INFO 2021-09-28 10:50:08,045 basehttp 161 "POST /login/ HTTP/1.1" 302 0
 INFO 2021-09-28 10:50:08,052 basehttp 161 "GET / HTTP/1.1" 200 16722
 INFO 2021-09-28 10:52:14,776 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-09-28 10:52:16,377 basehttp 161 "GET / HTTP/1.1" 200 4098
+INFO 2021-09-28 10:56:19,860 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 10:56:21,974 basehttp 161 "GET / HTTP/1.1" 200 4207
+WARNING 2021-09-28 10:56:22,223 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 10:56:22,224 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2846
+INFO 2021-09-28 10:56:55,701 basehttp 161 "POST / HTTP/1.1" 200 4228
+INFO 2021-09-28 11:00:13,059 autoreload 250 D:\×ÀÃæ\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-28 11:00:14,365 autoreload 636 Watching for file changes with StatReloader

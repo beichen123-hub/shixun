@@ -189,7 +189,7 @@ class loginView(View):
         if not all([username,password]):
             return render(request,template_name='login.html',context={'msg':'账号密码不能为空'})
         if not re.match('^1[3-9]\d{9}$',username):
-            return render(request,template_name='login.html',context={'msg':'手机号码不正确'})
+            return render(request,template_name='login.html',context={'msg':'手机号码格式不正确'})
         if not re.match('^[a-z0-9A]{8,20}$',password):
             return render(request,template_name='login.html',context={'msg':'密码格式不正确'})
         return_user = authenticate(mobile=username,password=password)
