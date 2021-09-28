@@ -217,3 +217,59 @@ class logoutView(View):
         resp.delete_cookie('is_login')
         resp.delete_cookie('login_name')
         return resp
+
+class ForgetPasswordView(View):
+    def get(self, request):
+        return render(request, 'forgetpassword.html')
+
+    def post(self, request):
+        mobile = request.POST.get('mobile')
+        password = request.POST.get('password')
+        password2 = request.POST.get('password2')
+        sms_code = request.POST.get('sms_code')
+        # 2、验证数据
+        # 2-1、判断参数是否齐全
+        if not all([mobile, password, password2, sms_code]):
+            return HttpResponseBadRequest('缺少必要的参数')
+        # 2-2、手机号是否符合规则
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return HttpResponseBadRequest('手机格式不正确')
+        # 2-3、判断密码是否符合规则
+        if not re.match(r'^[0-9A-Za-z]{8,20}$', password):
+            return HttpResponseBadRequest('密码格式不正确')
+        # 2-4、判断确认密码是否一致
+        if password != password2:
+            return HttpResponseBadRequest('两次密码输入不一致')
+        # 2-5、判断短信验证码是否正确
+        redis_conn = get_redis_connection('default')
+        redis_sms_code = redis_conn.get('sms:%s' % mobile)
+        if redis_sms_code is None:
+            return HttpResponseBadRequest('短信验证码过期')
+        try:
+            if redis_sms_code.decode() != sms_code:
+                return HttpResponseBadRequest('验证码错误')
+        except Exception as e:
+            logger.error(e)
+            return HttpResponseBadRequest('验证码错误')
+        # 3、根据手机号码进行用户信息的查询
+        return_user = User.objects.filter(mobile=mobile).first()
+        # 4、如果手机号查询出用户信息则进行用户密码的修改
+        # 5、如果手机号没有查询出用户信息，则进行新用户的创建
+        if return_user is None:
+            try:
+                User.objects.create_user(username=mobile, mobile=mobile, password=password)
+            except Exception as e:
+                logger.error(e)
+                return HttpResponseBadRequest('注册失败')
+        else:
+            try:
+                # 调用系统user对象的set_password()进行修改密码，该方法会对密码进行加密
+                return_user.set_password(password)
+                return_user.save()
+            except Exception as e:
+                logger.error(e)
+                return HttpResponseBadRequest('修改密码失败')
+        # 6、进行页面跳转，跳转到登录页面
+        resp = redirect(reverse('users:login'))
+        # 7、返回响应
+        return resp

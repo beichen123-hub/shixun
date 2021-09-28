@@ -23,5 +23,6 @@ urlpatterns = [
     path('smscode/',SmsCodeView.as_view(), name='smscode'),
     path('login/',loginView.as_view(), name='login'),
     path('login.html/',loginView.as_view(), name='login'),
-    path('logout/',logoutView.as_view(), name='logout')
+    path('logout/',logoutView.as_view(), name='logout'),
+    path('forgetpassword/', ForgetPasswordView.as_view(),name='forgetpassword'),
 ]

@@ -1578,3 +1578,108 @@ INFO 2021-09-28 14:35:24,474 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
 INFO 2021-09-28 14:35:24,482 basehttp 161 "GET / HTTP/1.1" 200 17992
 WARNING 2021-09-28 14:35:24,538 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
 WARNING 2021-09-28 14:35:24,566 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-09-28 15:20:21,743 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 15:20:24,290 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-28 15:20:24,328 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,328 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,329 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,332 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,336 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,340 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,340 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,345 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,346 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,349 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,350 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,350 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,352 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,355 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,355 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,358 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-28 15:20:24,475 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+WARNING 2021-09-28 15:20:24,716 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 15:20:24,717 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3372
+INFO 2021-09-28 15:20:29,221 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4335
+INFO 2021-09-28 15:21:17,576 autoreload 250 D:\桌面\shixun\shixunblog\templates\login.html changed, reloading.
+INFO 2021-09-28 15:21:18,583 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 15:21:18,841 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+ERROR 2021-09-28 15:21:21,604 log 224 Internal Server Error: /forgetpassword/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 223, in get
+    return render(request, 'forget_password.html')
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: forget_password.html
+ERROR 2021-09-28 15:21:21,606 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 500 94496
+INFO 2021-09-28 15:21:46,782 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 15:21:50,956 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-28 15:21:52,147 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-28 15:21:53,254 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5942
+INFO 2021-09-28 15:21:53,671 basehttp 161 "GET /imagecode/?uuid=46088a56-73cf-4a39-a8d6-77daccf53004 HTTP/1.1" 200 3030
+INFO 2021-09-28 15:22:13,373 views 172 短信验证码: 023358
+INFO 2021-09-28 15:22:13,769 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=BJXW&uuid=46088a56-73cf-4a39-a8d6-77daccf53004 HTTP/1.1" 200 63
+WARNING 2021-09-28 15:22:29,010 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:22:29,011 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-09-28 15:22:31,706 basehttp 161 "GET /imagecode/?uuid=7a4567c1-b28c-48ef-9a58-f6a2a608e46b HTTP/1.1" 200 2999
+INFO 2021-09-28 15:23:02,050 basehttp 161 "GET /imagecode/?uuid=bd5924e2-68fa-491b-8a04-bc71ab2c54e9 HTTP/1.1" 200 3511
+INFO 2021-09-28 15:23:19,775 views 172 短信验证码: 449815
+INFO 2021-09-28 15:23:19,984 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=WKGV&uuid=bd5924e2-68fa-491b-8a04-bc71ab2c54e9 HTTP/1.1" 200 63
+WARNING 2021-09-28 15:23:29,078 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:23:29,078 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+WARNING 2021-09-28 15:23:42,490 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:23:42,490 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+WARNING 2021-09-28 15:23:46,104 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:23:46,105 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-09-28 15:26:21,506 basehttp 161 "GET /imagecode/?uuid=2db5cf2b-d0ad-41e2-9ffe-6d54590de544 HTTP/1.1" 200 3129
+INFO 2021-09-28 15:26:22,314 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5942
+INFO 2021-09-28 15:26:22,385 basehttp 161 "GET /imagecode/?uuid=e0470ea2-9034-42b2-a114-de1317eb6ad2 HTTP/1.1" 200 3220
+INFO 2021-09-28 15:26:43,054 views 172 短信验证码: 139342
+INFO 2021-09-28 15:26:43,236 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=GIW9&uuid=e0470ea2-9034-42b2-a114-de1317eb6ad2 HTTP/1.1" 200 63
+WARNING 2021-09-28 15:27:03,807 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:27:03,807 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-09-28 15:27:06,439 basehttp 161 "GET /imagecode/?uuid=065a346a-f5df-4269-b520-98e9d7215084 HTTP/1.1" 200 3105
+WARNING 2021-09-28 15:27:11,157 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-28 15:27:11,158 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-28 15:27:11,158 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-09-28 15:28:40,830 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 15:28:48,365 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5942
+INFO 2021-09-28 15:28:48,585 basehttp 161 "GET /imagecode/?uuid=c44c0f70-deb7-4a68-b0be-7f8b9bbe323a HTTP/1.1" 200 3071
+INFO 2021-09-28 15:29:13,893 views 172 短信验证码: 127676
+INFO 2021-09-28 15:29:14,222 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=7LNG&uuid=c44c0f70-deb7-4a68-b0be-7f8b9bbe323a HTTP/1.1" 200 63
+WARNING 2021-09-28 15:29:30,035 log 224 Bad Request: /forgetpassword/
+WARNING 2021-09-28 15:29:30,036 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-09-28 15:38:29,738 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-28 15:38:33,233 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-28 15:38:33,834 log 224 Not Found: /favicon.ico
+WARNING 2021-09-28 15:38:33,834 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3372
+INFO 2021-09-28 15:38:34,688 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-28 15:38:41,371 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 15:38:41,379 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-28 15:38:45,635 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 15:38:45,642 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-28 15:38:46,548 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-28 15:38:48,714 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-09-28 15:38:48,985 basehttp 161 "GET /imagecode/?uuid=4c4ede28-701e-40df-9538-615d4b82f7ee HTTP/1.1" 200 3166
+INFO 2021-09-28 15:39:01,192 basehttp 161 "GET /imagecode/?uuid=c56cc4fe-d11e-4641-8168-f67f2fb08364 HTTP/1.1" 200 3075
+INFO 2021-09-28 15:39:06,619 basehttp 161 "GET /imagecode/?uuid=50230d2f-5b7a-41ff-9dc8-6fad47cba672 HTTP/1.1" 200 3426
+INFO 2021-09-28 15:39:13,996 views 172 短信验证码: 830867
+INFO 2021-09-28 15:39:26,153 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=TNZM&uuid=50230d2f-5b7a-41ff-9dc8-6fad47cba672 HTTP/1.1" 200 63
+INFO 2021-09-28 15:39:29,912 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 302 0
+INFO 2021-09-28 15:39:29,920 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-28 15:39:38,365 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-09-28 15:39:47,212 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-28 15:39:47,220 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-28 15:39:50,696 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-09-28 15:39:50,720 basehttp 161 "GET / HTTP/1.1" 200 17992
