@@ -1683,3 +1683,110 @@ INFO 2021-09-28 15:39:47,212 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
 INFO 2021-09-28 15:39:47,220 basehttp 161 "GET / HTTP/1.1" 200 17992
 INFO 2021-09-28 15:39:50,696 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
 INFO 2021-09-28 15:39:50,720 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-29 09:24:35,499 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 09:24:42,118 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 09:24:45,853 basehttp 161 "GET / HTTP/1.1" 200 17992
+INFO 2021-09-29 09:24:45,911 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,917 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,941 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,942 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,944 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,945 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,955 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:45,989 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,037 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,039 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,041 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,041 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,042 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,043 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,067 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,067 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-09-29 09:24:46,304 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+WARNING 2021-09-29 09:24:46,492 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 09:24:46,492 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3549
+INFO 2021-09-29 09:24:52,346 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 09:25:05,666 basehttp 161 "GET /usercenter HTTP/1.1" 301 0
+INFO 2021-09-29 09:25:05,677 basehttp 161 "GET /usercenter/ HTTP/1.1" 302 0
+INFO 2021-09-29 09:25:05,694 basehttp 161 "GET /login/?next=/usercenter/ HTTP/1.1" 200 4347
+ERROR 2021-09-29 09:25:21,961 log 224 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 27, in _decorator
+    return method(self, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 131, in has_key
+    return self.client.has_key(*args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\client\default.py", line 511, in has_key
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 200, in post
+    login(request, return_user)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\__init__.py", line 111, in login
+    request.session.cycle_key()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\base.py", line 344, in cycle_key
+    self.create()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\cache.py", line 43, in create
+    self._session_key = self._get_new_session_key()
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\base.py", line 196, in _get_new_session_key
+    if not self.exists(session_key):
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\sessions\backends\cache.py", line 70, in exists
+    return bool(session_key) and (self.cache_key_prefix + session_key) in self._cache
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\cache\backends\base.py", line 212, in __contains__
+    return self.has_key(key)
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\cache.py", line 34, in _decorator
+    raise e.__cause__
+  File "D:\python_code\code\beichen\lib\site-packages\django_redis\client\default.py", line 509, in has_key
+    return client.exists(key) == 1
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 1581, in exists
+    return self.execute_command('EXISTS', *names)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "D:\python_code\code\beichen\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-09-29 09:25:21,973 basehttp 161 "POST /login/?next=/usercenter/ HTTP/1.1" 500 145259
+INFO 2021-09-29 09:25:54,839 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 09:26:02,503 basehttp 161 "POST /login/?next=/usercenter/ HTTP/1.1" 302 0
+INFO 2021-09-29 09:26:02,515 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-29 09:26:14,461 basehttp 161 "GET /static/center.html HTTP/1.1" 404 1661
+WARNING 2021-09-29 09:26:19,300 basehttp 161 "GET /static/write_blog.html HTTP/1.1" 404 1673
+INFO 2021-09-29 09:26:27,728 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4118
+INFO 2021-09-29 09:26:27,751 basehttp 161 "GET /static/img/portrait.png HTTP/1.1" 304 0
+INFO 2021-09-29 10:31:25,952 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 10:32:42,732 autoreload 250 D:\桌面\shixun\shixunblog\users\urls.py changed, reloading.
+INFO 2021-09-29 10:32:44,965 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 10:32:57,288 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 10:33:55,130 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 10:35:01,699 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 10:35:07,522 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-29 10:35:08,018 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 10:35:08,018 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3549
+INFO 2021-09-29 10:35:09,649 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 10:35:16,511 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-29 10:35:16,517 basehttp 161 "GET / HTTP/1.1" 200 17992
+WARNING 2021-09-29 10:35:31,585 basehttp 161 "GET /static/center.html HTTP/1.1" 404 1661
+INFO 2021-09-29 10:36:45,006 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-09-29 10:36:47,359 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-29 10:36:47,531 basehttp 161 "GET /static/center.html HTTP/1.1" 404 1661
+INFO 2021-09-29 10:37:05,605 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-09-29 10:37:09,268 basehttp 161 "GET /static/center.html HTTP/1.1" 404 1661
+WARNING 2021-09-29 10:37:12,465 basehttp 161 "GET /static/center.html HTTP/1.1" 404 1661
+INFO 2021-09-29 10:37:17,571 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 10:37:22,877 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4140
+WARNING 2021-09-29 10:37:32,024 base 101 Method Not Allowed (POST): /usercenter/
+WARNING 2021-09-29 10:37:32,025 log 224 Method Not Allowed: /usercenter/
+WARNING 2021-09-29 10:37:32,025 basehttp 161 "POST /usercenter/ HTTP/1.1" 405 0
+INFO 2021-09-29 10:37:41,954 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4140
