@@ -1,18 +1,21 @@
-from django.shortcuts import render, HttpResponse, redirect
-from django.views import View
-from django.http.response import HttpResponseBadRequest
-from libs.captcha.captcha import captcha    # 导入验证码
-from django_redis import get_redis_connection   # 导入redis
-from django.http.response import JsonResponse   # 导入Json返回值包
-from utils.response_code import RETCODE  # 导入自定义相应码
 import logging  # 导入logging包
+import re  # 导入正则表达式包
 from random import randint  # 导入随机数包
-from libs.tongxun.sms import CCP     # 导入容联运包
-import re   # 导入正则表达式包
-from users.models import User   # 导入用户包
-from django.db import DataError # 导入数据库异常包
+
+from django.contrib.auth import login, authenticate, logout  # 实现状态保持
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db import DataError  # 导入数据库异常包
+from django.http.response import HttpResponseBadRequest
+from django.http.response import JsonResponse  # 导入Json返回值包
+from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse
-from django.contrib.auth import login,authenticate,logout
+from django.views import View
+from django_redis import get_redis_connection  # 导入redis
+
+from libs.captcha.captcha import captcha  # 导入验证码
+from libs.tongxun.sms import CCP  # 导入容联运包
+from users.models import User  # 导入用户包
+from utils.response_code import RETCODE  # 导入自定义相应码
 
 logger = logging.getLogger("django")
 
@@ -46,19 +49,19 @@ class RegisterView(View):
         password2 = request.POST.get('password2')
         sms_code = request.POST.get('sms_code')
         # 验证数据
-        # 2.1、参数是否齐全
+        # 2.1、验证参数是否齐全
         if not all([mobile, password, password2, sms_code]):
             return HttpResponseBadRequest('缺少必要参数')
-        # 2.2、手机号格式是否正确
+        # 2.2、验证手机号格式是否正确
         if not re.match('^1[3-9]\d{9}$', mobile):
-            return HttpResponseBadRequest('手机号码格式不正确')
-        # 2.3、密码是否符合格式
+            return HttpResponseBadRequest('手机号码错误或格式不正确')
+        # 2.3、验证密码是否符合格式
         if not re.match('^[0-9a-zA-Z]{8,20}$', password) or not re.match('^[0-9a-zA-Z]{8,20}$', password):
             return HttpResponseBadRequest('密码长度、格式不正确。长度8-20，必须是数字、字母')
-        # 2.4 面膜和确认密码是否一致
+        # 2.4 验证密码和确认密码是否一致
         if password != password2:
             return HttpResponseBadRequest('两次输入的密码不一致')
-        # 2.5、短信验证码是否和redis中一致
+        # 2.5、验证短信验证码是否和redis中一致
         redis_conn = get_redis_connection('default')
         sms_code_redis = redis_conn.get('sms:%s' % mobile)
         if sms_code_redis is None:
@@ -77,18 +80,21 @@ class RegisterView(View):
         except DataError as e:
             logger.error(e)
             return HttpResponseBadRequest('注册失败')
-            # 实现状态保持
+
+        # 实现状态保持
         login(request, user)
-            # 4、返回响应跳转到指定页面
+
+        resp = redirect(reverse('home:index'))
+        # 设置cookie以方便首页中用户信息进行判断和用户新的展示
+        resp.set_cookie('is_login', True)
+        # 通过cookie传递登录用户名，过期时间为1天
+        resp.set_cookie('login_name', user.username, max_age=1*24*3600)
+        # 4、返回响应跳转到指定页面
         # redirect是进行页面重定向
         # reverse是可以通过namespace:name来获取视图所对应的路由
-        resp = redirect(reverse('home:index'))
-        resp.set_cookie('is_login',True)
-        resp.set_cookie('lohin_name', user.username, max_age=1 * 24 *3600)
         return resp
+        # return HttpResponseRedirect('/')
         # return HttpResponse('注册成功')
-
-
 
 
 # 验证码视图
@@ -120,6 +126,7 @@ class ImageView(View):
         redis_conn.setex(name='img:%s' % uuid, time=300, value=txt)
         # 5、返回图片给前端
         return HttpResponse(image, content_type='image/jpeg')
+
 
 # 发送短信验证码视图
 class SmsCodeView(View):
@@ -178,84 +185,149 @@ class SmsCodeView(View):
         return JsonResponse({'code': RETCODE.OK, 'errmsg': '短信发送成功'})
 
 
-class loginView(View):
-    def get(self,request):
-        return render(request,"login.html")
-    def post(self,request):
-        username = request.POST.get('mobile')
-        password = request.POST.get('password')
-        remember = request.POST.get('remember')
-
-        if not all([username,password]):
-            return render(request,template_name='login.html',context={'msg':'账号密码不能为空'})
-        if not re.match('^1[3-9]\d{9}$',username):
-            return render(request,template_name='login.html',context={'msg':'手机号码格式不正确'})
-        if not re.match('^[a-z0-9A]{8,20}$',password):
-            return render(request,template_name='login.html',context={'msg':'密码格式不正确'})
-        return_user = authenticate(mobile=username,password=password)
+# 登录
+class LoginView(View):
+    def get(self, request):
+        return render(request, "login.html")
+    def post(self, request):
+        '''
+       实现思路：
+       1、接收提交参数
+       2、验证参数
+        2-1、手机号码是否符合规则
+        2-2、密码是否符合规则
+       3、用户认证登录
+       4、状态保持
+       5、根据用户选择的是否记住登录状态进行判断
+       6、设置cookie信息，为首页显示服务
+       7、跳转到首页
+       :param request:
+       :return:
+       '''
+        # 1、接收提交参数
+        username = request.POST.get("mobile")
+        password = request.POST.get("password")
+        remember = request.POST.get("remember")
+        # 2、验证参数
+        if not all([username, password]):
+            return render(request, template_name="login.html", context={'msg': '账号或密码不能为空'})
+        # 2 - 1、手机号码是否符合规则
+        if not re.match('^1[3-9]\d{9}$', username):
+            return render(request, template_name="login.html", context={'msg': '手机号格式不正确'})
+        # 2 - 2、密码是否符合规则
+        if not re.match('^[a-z0-9A-Z]{8,20}$', password):
+            return render(request, template_name="login.html", context={'msg': '密码格式不正确'})
+        # 3、用户认证登录
+        # 采用系统自带的认证方法进行认证
+        # 如果用户名和密码正确，会返回true,否则返回False
+        # 默认的认证方法是：针对username字段进行用户名的判断，当前的判断信息是“手机号”，所以需要修改以下认证信息
+        return_user = authenticate(mobile=username, password=password)
+        if return_user == None:
+            return render(request, template_name="login.html", context={'msg': '账号或密码错误'})
+        # print(return_user)
+        # 判断如果是NONE,就表示用户名或密码是错误的
         if return_user is None:
-            return render(request, template_name='login.html', context={'msg':'账号或密码错误'})
-
-        login(request, return_user)
-        resp = redirect(reverse('home:index'))
-        # 根据用户选择的是否记住登录状态进行判时
-        if remember != "on":  # 用户没有勾选复选相
+            return render(request, "login.html")
+        # 4、状态保持
+        login(request,return_user)
+        # 7、跳转到首页
+        # 根据匿名登录跳转参数next,跳转到指定页面
+        next_page = request.GET.get('next')
+        if next_page:
+            resp = redirect(next_page)
+        else:
+            resp = redirect(reverse('home:index'))
+        # 5、根据用户选择的是否记住登录状态进行判断
+        if remember != 'on':    # 用户没有勾选复选框
             resp.set_cookie('is_login', True)
             resp.set_cookie('login_name', return_user.username)
-            request.session.set_expiry(0)
+            request.session.set_expiry(0)  # 表示浏览器关闭时清除
         else:
-            # 设置2周内的 cookie
-            resp.set_cookie('is_login',True, max_age=24*3600*14)
-            resp.set_cookie('Login_name', return_user.username, max_age=24*3600*14)
-            request.session.set_expiry(None)  # 表示设置默认时长,默认就是2周时间
+            # 设置2周内的cookie
+            resp.set_cookie('is_login', True, max_age=24*3600*14)
+            resp.set_cookie('login_name', return_user.username, max_age=24*3600*14)
+            request.session.set_expiry(None)    # 表示设置默认时常，默认就是2周时间
         return resp
 
-class logoutView(View):
-    def get(self,request):
+
+# 退出登录
+class LogoutView(View):
+    def get(self, request):
+        '''
+        实现思路
+        1、清除session数据
+        2、删除cookie数据
+        3、跳转到首页
+        :param request:
+        :return:
+        '''
+        # 1、
+        # 清除session数据
         logout(request)
-        resp = redirect(reverse('home:index'))
+        resp = redirect(reverse("home:index"))
+        # 删除cookie数据
         resp.delete_cookie('is_login')
         resp.delete_cookie('login_name')
         return resp
 
+
+# 忘记密码
 class ForgetPasswordView(View):
     def get(self, request):
-        return render(request, 'forgetpassword.html')
-
+        return render(request, "forget_password.html")
     def post(self, request):
-        mobile = request.POST.get('mobile')
-        password = request.POST.get('password')
-        password2 = request.POST.get('password2')
-        sms_code = request.POST.get('sms_code')
-        # 2、验证数据
-        # 2-1、判断参数是否齐全
+        '''
+        实现思路：
+        1、接受数据
+        2、验证数据
+            2.1、判断参数是否齐全
+            2.2、手机号是否符合规则
+            2.3、判断密码是否符合规则
+            2.4、判断确认密码是否一致
+            2.5、判断短信验证码是否正确
+        3、根据手机号码进行用户信息查询
+        4、如果手机号查询出用户信息则进行用户密码的修改
+        5、如果手机号没有查询出用户信息，则进行新用户的创建
+        6、进行也买你跳转，跳转到登录页面
+        7、返回响应
+        :param request:
+        :return:
+        '''
+        # 1、接受数据
+        mobile = request.POST.get("mobile")
+        password = request.POST.get("password")
+        password2 = request.POST.get("password2")
+        sms_code = request.POST.get("sms_code")
+        # 2、验证参数是否齐全
+        # 2.1、判断参数是否齐全
         if not all([mobile, password, password2, sms_code]):
-            return HttpResponseBadRequest('缺少必要的参数')
-        # 2-2、手机号是否符合规则
-        if not re.match(r'^1[3-9]\d{9}$', mobile):
-            return HttpResponseBadRequest('手机格式不正确')
-        # 2-3、判断密码是否符合规则
-        if not re.match(r'^[0-9A-Za-z]{8,20}$', password):
+            return HttpResponseBadRequest('缺少必要参数')
+            # return render(request, 'forget_password.html', {'msg':'缺少必要参数'})
+        # 2.2、手机号是否符合规则
+        if not re.match('^1[3-9]\d{9}$', mobile):
+            return HttpResponseBadRequest('手机号格式不正确')
+        # 2.3、判断密码是否符合规则
+        if not re.match('^[0-9a-zA-Z]{8,20}$', password):
             return HttpResponseBadRequest('密码格式不正确')
-        # 2-4、判断确认密码是否一致
+        # 2.4、判断确认密码是否一致
         if password != password2:
             return HttpResponseBadRequest('两次密码输入不一致')
-        # 2-5、判断短信验证码是否正确
+        # 2.5、判断短信验证码是否正确
         redis_conn = get_redis_connection('default')
         redis_sms_code = redis_conn.get('sms:%s' % mobile)
         if redis_sms_code is None:
             return HttpResponseBadRequest('短信验证码过期')
         try:
-            if redis_sms_code.decode() != sms_code:
+            if redis_sms_code.decode().lower() != sms_code.lower:
                 return HttpResponseBadRequest('验证码错误')
         except Exception as e:
             logger.error(e)
             return HttpResponseBadRequest('验证码错误')
-        # 3、根据手机号码进行用户信息的查询
-        return_user = User.objects.filter(mobile=mobile).first()
+        # 3、根据手机号码进行用户信息查询
+        user = User.objects.filter(mobile=mobile).first()
         # 4、如果手机号查询出用户信息则进行用户密码的修改
         # 5、如果手机号没有查询出用户信息，则进行新用户的创建
-        if return_user is None:
+        if user is None:
             try:
                 User.objects.create_user(username=mobile, mobile=mobile, password=password)
             except Exception as e:
@@ -264,12 +336,54 @@ class ForgetPasswordView(View):
         else:
             try:
                 # 调用系统user对象的set_password()进行修改密码，该方法会对密码进行加密
-                return_user.set_password(password)
-                return_user.save()
+                user.set_password(password)
+                user.save()
             except Exception as e:
                 logger.error(e)
                 return HttpResponseBadRequest('修改密码失败')
         # 6、进行页面跳转，跳转到登录页面
         resp = redirect(reverse('users:login'))
-        # 7、返回响应
+        return resp
+
+
+'''
+LoginRequiredMixin:封装了判断用户是否登录的操作
+1、待验证视图需要继承该类即可，他会自动验证身份信息
+2、如果用户未登录，那么就是匿名用户，当访问该视图是，会自动进行跳转到默认登录地址
+3、需要在setting中设置默认登录地址访问LOGIN_URL = '/login/'
+4、在登录该视图的post方法中，判断next有值跳转
+'''
+# 用户中心
+class UserCenterView(LoginRequiredMixin ,View):
+    def get(self, requset):
+        # 需要判断用户是否登录，根据用户是否登录的结果，决定用户是否可以访问用户中心
+        # if not requset.user.is_authenticated:     # 判断用户是否登录，如果通过登录验证则返回true，否则返回false
+        #     return redirect(reverse('users:login'))
+        userinfo = requset.user
+        context = {
+            'username': userinfo.username,
+            'mobile': userinfo.mobile,
+            'avatar': userinfo.avatar.url if userinfo.avatar else None,
+            'user_desc': userinfo.user_desc,
+        }
+        return render(requset,'usercenter.html', context=context)
+    def post(self, request):
+        userinfo = request.user
+        username = request.POST.get('username')
+        user_desc = request.POST.get('desc')
+        avatar = request.FILES.get('avatar')
+        try:
+            userinfo.username = username
+            userinfo.user_desc = user_desc
+            if avatar:
+                userinfo.avatar = avatar
+            userinfo.save()
+        except Exception as e:
+            logger.error(e)
+            return HttpResponseBadRequest('修改用户信息失败')
+        # 3、更新cookie中的username
+        # 4、刷新当前页面（重定向操作）
+        resp = redirect(reverse('users:usercenter'))
+        resp.set_cookie('login_name', userinfo.username)
+        # 5、返回相应
         return resp

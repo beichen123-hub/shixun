@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>厚浦博客</title>
+    <title>用户中心</title>
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/cl-css.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="cl-cantainer container pt-5">
-        <form class="col-md-6 offset-md-3" method="post" enctype="multipart/form-data">
+         <form class="col-md-6 offset-md-3" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
                 <label for="username">用户名</label>
@@ -81,6 +81,7 @@
             </div>
             <!-- 提交按钮 -->
             <button type="submit" class="btn btn-primary" style="margin-left: 12px">修改</button>
+
         </form>
     </div>
     <div class="container-fluid cl-footer">

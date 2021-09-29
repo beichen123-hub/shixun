@@ -1790,3 +1790,164 @@ WARNING 2021-09-29 10:37:32,024 base 101 Method Not Allowed (POST): /usercenter/
 WARNING 2021-09-29 10:37:32,025 log 224 Method Not Allowed: /usercenter/
 WARNING 2021-09-29 10:37:32,025 basehttp 161 "POST /usercenter/ HTTP/1.1" 405 0
 INFO 2021-09-29 10:37:41,954 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4140
+INFO 2021-09-29 11:15:11,544 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:15:14,977 basehttp 161 "GET / HTTP/1.1" 200 17983
+WARNING 2021-09-29 11:15:15,622 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 11:15:15,622 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3675
+INFO 2021-09-29 11:15:17,033 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 11:15:30,064 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-29 11:15:30,069 basehttp 161 "GET / HTTP/1.1" 200 17983
+ERROR 2021-09-29 11:15:32,758 log 224 Internal Server Error: /usercenter/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 367, in get
+    return render(requset, 'usercenter.html', context=context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: usercenter.html
+ERROR 2021-09-29 11:15:32,762 basehttp 161 "GET /usercenter/ HTTP/1.1" 500 99906
+INFO 2021-09-29 11:16:09,625 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-29 11:16:11,790 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:18:07,486 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-09-29 11:18:09,886 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:18:38,642 autoreload 250 D:\桌面\shixun\shixunblog\templates\usercenter.html changed, reloading.
+INFO 2021-09-29 11:18:41,024 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:18:55,448 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:19:00,835 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:19:01,956 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:19:04,298 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+ERROR 2021-09-29 11:19:20,908 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:19:20,908 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:19:20,909 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+INFO 2021-09-29 11:21:05,304 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+INFO 2021-09-29 11:21:06,135 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+ERROR 2021-09-29 11:21:12,236 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:21:12,236 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:21:12,237 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+ERROR 2021-09-29 11:21:15,418 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:21:15,418 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:21:15,419 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+INFO 2021-09-29 11:21:17,674 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+INFO 2021-09-29 11:21:18,173 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+INFO 2021-09-29 11:21:18,342 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+INFO 2021-09-29 11:21:18,531 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+INFO 2021-09-29 11:22:34,846 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:22:36,942 basehttp 161 "GET / HTTP/1.1" 200 17983
+WARNING 2021-09-29 11:22:37,318 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 11:22:37,319 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3675
+INFO 2021-09-29 11:22:38,940 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 11:22:44,978 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-29 11:22:44,984 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:22:47,763 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4141
+WARNING 2021-09-29 11:22:50,047 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-29 11:22:50,047 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-29 11:22:50,050 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+ERROR 2021-09-29 11:23:04,161 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:23:04,161 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:23:04,162 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+INFO 2021-09-29 11:27:30,031 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:27:32,091 basehttp 161 "GET / HTTP/1.1" 200 17983
+WARNING 2021-09-29 11:27:32,474 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 11:27:32,474 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3675
+INFO 2021-09-29 11:27:33,702 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 11:27:39,975 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+WARNING 2021-09-29 11:27:41,902 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-29 11:27:41,905 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-29 11:27:41,908 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-29 11:30:21,826 autoreload 250 D:\桌面\shixun\shixunblog\templates\usercenter.html changed, reloading.
+INFO 2021-09-29 11:30:24,010 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:30:29,575 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-29 11:30:29,583 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:30:31,702 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+ERROR 2021-09-29 11:30:39,522 views 380 (1048, "Column 'user_desc' cannot be null")
+INFO 2021-09-29 11:30:39,526 basehttp 161 "POST /usercenter/ HTTP/1.1" 200 4120
+ERROR 2021-09-29 11:30:42,746 views 380 (1048, "Column 'user_desc' cannot be null")
+INFO 2021-09-29 11:30:42,748 basehttp 161 "POST /usercenter/ HTTP/1.1" 200 4120
+INFO 2021-09-29 11:31:20,207 autoreload 250 D:\桌面\shixun\shixunblog\templates\usercenter.html changed, reloading.
+INFO 2021-09-29 11:31:22,350 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-09-29 11:31:22,675 views 380 (1048, "Column 'user_desc' cannot be null")
+INFO 2021-09-29 11:31:22,675 basehttp 161 "POST /usercenter/ HTTP/1.1" 200 4223
+INFO 2021-09-29 11:31:25,385 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4245
+INFO 2021-09-29 11:31:26,951 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4245
+INFO 2021-09-29 11:31:27,986 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4245
+INFO 2021-09-29 11:31:30,648 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:31,034 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:31,194 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:31,342 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:31,518 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:31,647 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:31:33,612 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4245
+ERROR 2021-09-29 11:31:43,929 views 380 (1048, "Column 'user_desc' cannot be null")
+INFO 2021-09-29 11:31:43,933 basehttp 161 "POST /usercenter/ HTTP/1.1" 200 4223
+INFO 2021-09-29 11:32:15,637 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:32:18,661 basehttp 161 "GET / HTTP/1.1" 200 17983
+WARNING 2021-09-29 11:32:19,050 log 224 Not Found: /favicon.ico
+WARNING 2021-09-29 11:32:19,052 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3675
+INFO 2021-09-29 11:32:20,520 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 11:32:27,038 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+WARNING 2021-09-29 11:32:29,241 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-29 11:32:29,241 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-29 11:32:29,253 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-29 11:33:58,508 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4371
+WARNING 2021-09-29 11:33:58,636 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-29 11:33:58,643 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-29 11:33:58,660 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-09-29 11:34:06,728 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-09-29 11:34:06,739 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-09-29 11:34:06,742 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-09-29 11:35:17,328 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:35:18,833 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:21,584 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-09-29 11:35:28,320 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-09-29 11:35:28,325 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:30,343 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+ERROR 2021-09-29 11:35:35,572 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:35:35,572 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:35:35,573 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+WARNING 2021-09-29 11:35:41,971 log 224 Not Found: /in
+WARNING 2021-09-29 11:35:41,971 basehttp 161 "GET /in HTTP/1.1" 404 3648
+WARNING 2021-09-29 11:35:46,305 log 224 Not Found: /index
+WARNING 2021-09-29 11:35:46,306 basehttp 161 "GET /index HTTP/1.1" 404 3657
+INFO 2021-09-29 11:35:52,350 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:55,333 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:55,917 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:56,250 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:56,413 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:35:58,091 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+ERROR 2021-09-29 11:36:15,027 views 380 (1048, "Column 'user_desc' cannot be null")
+WARNING 2021-09-29 11:36:15,027 log 224 Bad Request: /usercenter/
+WARNING 2021-09-29 11:36:15,028 basehttp 161 "POST /usercenter/ HTTP/1.1" 400 24
+INFO 2021-09-29 11:36:17,074 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:17,464 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:17,652 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:17,822 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,000 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,156 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,317 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,463 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,665 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:36:18,921 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:38:12,362 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-09-29 11:38:12,565 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:38:13,913 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-09-29 11:38:25,404 basehttp 161 "POST /usercenter/ HTTP/1.1" 302 0
+INFO 2021-09-29 11:38:25,417 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4164
+INFO 2021-09-29 11:38:25,442 basehttp 161 "GET /media/avatar/20210929/images_JsYbNR7.png HTTP/1.1" 200 4485
+INFO 2021-09-29 11:38:34,080 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4164
+INFO 2021-09-29 11:38:34,106 basehttp 161 "GET /media/avatar/20210929/images_JsYbNR7.png HTTP/1.1" 304 0
+INFO 2021-09-29 11:38:37,281 basehttp 161 "GET / HTTP/1.1" 200 17983
+INFO 2021-09-29 11:38:41,186 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4164
+INFO 2021-09-29 11:38:41,208 basehttp 161 "GET /media/avatar/20210929/images_JsYbNR7.png HTTP/1.1" 304 0

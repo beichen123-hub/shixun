@@ -192,3 +192,6 @@ LOGGING = {
 #指定本项目用户模型类
 AUTH_USER_MODEL = 'users.User'
 LOGIN_URL = '/login/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# 图片的统一路由
+MEDIA_URL = '/media/'
