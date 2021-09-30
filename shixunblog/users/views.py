@@ -12,6 +12,7 @@ from django.urls import reverse
 from django.views import View
 from django_redis import get_redis_connection  # 导入redis
 
+from home.models import ArticleCategory, Article
 from libs.captcha.captcha import captcha  # 导入验证码
 from libs.tongxun.sms import CCP  # 导入容联运包
 from users.models import User  # 导入用户包
@@ -387,3 +388,56 @@ class UserCenterView(LoginRequiredMixin ,View):
         resp.set_cookie('login_name', userinfo.username)
         # 5、返回相应
         return resp
+
+
+
+class WriteBlogView(LoginRequiredMixin, View):
+    def get(self, requset):
+        # 获取所有分类信息
+        categories = ArticleCategory.objects.all()
+        context = {
+            'categories': categories
+        }
+        return render(requset, 'writeblog.html', context=context)
+    def post(self, request):
+        '''
+        实现思路：
+        1、接收数据
+        2、验证数据
+        3、数据入库
+        4、跳转到指定页面
+        :param request:
+        :return:
+        '''
+        # 1、接收数据
+        avatar = request.FILES.get('Illustration')
+        title = request.POST.get('title')
+        category_id = request.POST.get('column')
+        tags = request.POST.get('tags')
+        sumary = request.POST.get('abstract')
+        content = request.POST.get('content')
+        user = request.user
+        # 2、验证数据
+        # 2-1、参数齐全验证
+        if not all([avatar, title, category_id, sumary, content]):
+            return HttpResponseBadRequest('参数不齐全')
+        # 2-2、判断分类id
+        try:
+            category = ArticleCategory.objects.filter(pk=category_id).first()
+        except ArticleCategory.DoesNotExist:
+            return HttpResponseBadRequest('没有该分类信息')
+        # 3、数据入库
+        try:
+            Article.objects.create(
+                author=user,
+                avatar=avatar,
+                category=category,
+                tags=tags,
+                sumary=sumary,
+                content=content
+            )
+        except Exception as e:
+            logger.error(e)
+            return HttpResponseBadRequest('发布失败，请稍后重试')
+        # 4、跳转到指定页面
+        return redirect(reverse('home:index'))

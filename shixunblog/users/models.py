@@ -1,7 +1,6 @@
-from django.db import models
-
 # 导入系统抽象类用户
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 
 # Create your models here.
@@ -20,6 +19,7 @@ class User(AbstractUser):
     user_desc = models.CharField(max_length=500, blank=True)
     USERNAME_FIELD = "mobile"
 
+    REQUIRED_FIELDS = ['username', 'email']
     class Meta:
         db_table = 'tb_users'  # 修改表名
         verbose_name = '用户管理'  # admin 后台显示
@@ -27,3 +27,4 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.mobile
+
