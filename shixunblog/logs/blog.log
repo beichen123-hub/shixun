@@ -2653,3 +2653,1061 @@ INFO 2021-09-30 11:38:55,777 autoreload 636 Watching for file changes with StatR
 INFO 2021-09-30 11:39:26,260 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4633
 INFO 2021-09-30 11:42:54,108 basehttp 161 "GET / HTTP/1.1" 200 17969
 INFO 2021-09-30 11:43:36,958 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4633
+INFO 2021-10-08 10:29:10,553 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:13:39,140 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:13:46,167 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:13:46,215 basehttp 161 "GET /static/highlight/styles/railscasts.css HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,215 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,215 basehttp 161 "GET /static/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,223 basehttp 161 "GET /static/css/cl-css.css HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,231 basehttp 161 "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,231 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,239 basehttp 161 "GET /static/highlight/highlight.pack.js HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,247 basehttp 161 "GET /static/img/logo.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,247 basehttp 161 "GET /static/js/index.js HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,263 basehttp 161 "GET /static/temporary-img/recommended.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,263 basehttp 161 "GET /static/temporary-img/list-image1.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,263 basehttp 161 "GET /static/temporary-img/recommended-right.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,271 basehttp 161 "GET /static/temporary-img/code.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,279 basehttp 161 "GET /static/temporary-img/recommended-left.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,279 basehttp 161 "GET /static/temporary-img/list-image2.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,279 basehttp 161 "GET /static/temporary-img/list-image3.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,287 basehttp 161 "GET /static/temporary-img/list-right.jpg HTTP/1.1" 304 0
+INFO 2021-10-08 22:13:46,543 basehttp 161 "GET /static/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+WARNING 2021-10-08 22:13:46,935 log 224 Not Found: /favicon.ico
+WARNING 2021-10-08 22:13:46,943 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-08 22:13:48,914 basehttp 161 "GET /login.html HTTP/1.1" 301 0
+INFO 2021-10-08 22:13:48,930 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 22:13:48,970 basehttp 161 "GET /static/js/register.js HTTP/1.1" 304 0
+ERROR 2021-10-08 22:13:59,885 log 224 Internal Server Error: /login.html/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'shixun.tb_users' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 225, in post
+    return_user = authenticate(mobile=username, password=password)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\__init__.py", line 76, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\base_user.py", line 45, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\sql\compiler.py", line 1169, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'shixun.tb_users' doesn't exist")
+ERROR 2021-10-08 22:13:59,909 basehttp 161 "POST /login.html/ HTTP/1.1" 500 236346
+ERROR 2021-10-08 22:14:48,147 log 224 Internal Server Error: /forgetpassword/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 278, in get
+    return render(request, "forget_password.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: forget_password.html
+ERROR 2021-10-08 22:14:48,147 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 500 94223
+INFO 2021-10-08 22:16:45,664 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:17:37,804 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-08 22:17:38,220 log 224 Not Found: /favicon.ico
+WARNING 2021-10-08 22:17:38,220 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-08 22:17:41,328 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+ERROR 2021-10-08 22:17:50,196 log 224 Internal Server Error: /login.html/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'shixun.tb_users' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 225, in post
+    return_user = authenticate(mobile=username, password=password)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\__init__.py", line 76, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "D:\python_code\code\beichen\lib\site-packages\django\contrib\auth\base_user.py", line 45, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\models\sql\compiler.py", line 1169, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\python_code\code\beichen\lib\site-packages\django\db\backends\mysql\base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 163, in execute
+    result = self._query(query)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\cursors.py", line 321, in _query
+    conn.query(q)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 505, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 724, in _read_query_result
+    result.read()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 1069, in read
+    first_packet = self.connection._read_packet()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\connections.py", line 676, in _read_packet
+    packet.raise_for_error()
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\protocol.py", line 223, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "D:\python_code\code\beichen\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'shixun.tb_users' doesn't exist")
+ERROR 2021-10-08 22:17:50,220 basehttp 161 "POST /login.html/ HTTP/1.1" 500 236346
+INFO 2021-10-08 22:28:37,119 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:28:39,746 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-08 22:28:40,258 log 224 Not Found: /favicon.ico
+WARNING 2021-10-08 22:28:40,258 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-08 22:28:41,176 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 22:28:43,017 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-10-08 22:28:43,636 basehttp 161 "GET /imagecode/?uuid=af9fd29f-6a07-4740-b763-43335d3d7ae8 HTTP/1.1" 200 3117
+ERROR 2021-10-08 22:29:03,462 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 176, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-10-08 22:29:03,470 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=OBDY&uuid=af9fd29f-6a07-4740-b763-43335d3d7ae8 HTTP/1.1" 500 82031
+INFO 2021-10-08 22:29:11,376 basehttp 161 "GET /imagecode/?uuid=4131bd2e-3c2a-49ef-ac7b-26e20158d1b2 HTTP/1.1" 200 3482
+INFO 2021-10-08 22:29:17,686 views 180 短信验证码: 141462
+INFO 2021-10-08 22:29:17,832 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=YUWX&uuid=4131bd2e-3c2a-49ef-ac7b-26e20158d1b2 HTTP/1.1" 200 63
+INFO 2021-10-08 22:29:28,003 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:29:28,011 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:29:32,939 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4402
+WARNING 2021-10-08 22:29:54,340 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 22:29:54,340 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 22:29:59,702 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:29:59,718 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:31:38,505 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:31:40,963 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-08 22:31:41,427 log 224 Not Found: /favicon.ico
+WARNING 2021-10-08 22:31:41,427 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-08 22:31:57,510 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 22:31:57,682 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-08 22:32:02,958 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 22:32:02,998 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-08 22:33:25,013 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:34:52,973 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-08 22:35:02,092 basehttp 161 "POST /admin/login/?next=/admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:02,116 basehttp 161 "GET /admin/login HTTP/1.1" 301 0
+INFO 2021-10-08 22:35:02,148 basehttp 161 "GET /admin/login/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:02,204 basehttp 161 "GET /admin/ HTTP/1.1" 200 3564
+INFO 2021-10-08 22:35:05,559 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6405
+INFO 2021-10-08 22:35:05,615 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-08 22:35:13,660 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:13,756 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6663
+INFO 2021-10-08 22:35:13,796 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-08 22:35:13,828 basehttp 161 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2021-10-08 22:35:18,562 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:18,658 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6663
+INFO 2021-10-08 22:35:18,690 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-08 22:35:26,532 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:26,588 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6663
+INFO 2021-10-08 22:35:26,628 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-08 22:35:27,886 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:35:28,006 basehttp 161 "GET /admin/home/articlecategory/ HTTP/1.1" 200 6734
+INFO 2021-10-08 22:35:28,054 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-08 22:35:56,397 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:35:58,378 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 22:36:06,266 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-08 22:36:14,493 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-08 22:36:24,382 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:36:24,390 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:36:27,022 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-10-08 22:36:27,086 basehttp 161 "GET /static/img/portrait.png HTTP/1.1" 304 0
+INFO 2021-10-08 22:36:45,606 basehttp 161 "POST /usercenter/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:36:45,622 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4161
+INFO 2021-10-08 22:36:45,646 basehttp 161 "GET /media/avatar/20211008/images.png HTTP/1.1" 200 4485
+INFO 2021-10-08 22:36:55,277 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:37:00,792 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4712
+WARNING 2021-10-08 22:37:14,933 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 22:37:14,941 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+WARNING 2021-10-08 22:37:19,158 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 22:37:19,158 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+WARNING 2021-10-08 22:37:24,199 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-10-08 22:37:24,199 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-10-08 22:37:24,199 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+WARNING 2021-10-08 22:37:33,473 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 22:37:33,473 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+WARNING 2021-10-08 22:37:54,519 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-10-08 22:37:54,559 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-10-08 22:37:54,607 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+INFO 2021-10-08 22:37:57,345 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-08 22:37:57,457 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-10-08 22:37:57,529 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-10-08 22:37:59,528 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-08 22:37:59,544 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-08 22:37:59,744 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-10-08 22:37:59,832 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+INFO 2021-10-08 22:38:00,570 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+WARNING 2021-10-08 22:38:00,730 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+WARNING 2021-10-08 22:38:00,898 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-10-08 22:38:00,962 basehttp 161 "GET /static/vue/axios.min.map HTTP/1.1" 404 1679
+ERROR 2021-10-08 22:38:02,596 log 224 Internal Server Error: /forgetpassword/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 278, in get
+    return render(request, "forget_password.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: forget_password.html
+ERROR 2021-10-08 22:38:02,604 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 500 94223
+INFO 2021-10-08 22:40:55,518 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:41:18,188 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:41:27,811 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:41:29,785 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:41:31,610 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+ERROR 2021-10-08 22:41:33,333 log 224 Internal Server Error: /forgetpassword/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 278, in get
+    return render(request, "forget_password.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: forget_password.html
+ERROR 2021-10-08 22:41:33,333 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 500 94223
+INFO 2021-10-08 22:44:59,831 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:45:01,915 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 22:45:05,842 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+ERROR 2021-10-08 22:45:08,668 log 224 Internal Server Error: /forgetpassword/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 278, in get
+    return render(request, "forget_password.html")
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: forget_password.html
+ERROR 2021-10-08 22:45:08,668 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 500 94223
+INFO 2021-10-08 22:45:52,514 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:45:58,113 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 22:46:00,108 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-08 22:46:00,452 basehttp 161 "GET /imagecode/?uuid=2c4fe9e6-2b0b-45b2-8ee6-d2da51ec96e0 HTTP/1.1" 200 3045
+INFO 2021-10-08 22:46:27,949 views 180 短信验证码: 547209
+INFO 2021-10-08 22:46:28,005 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=7VIP&uuid=2c4fe9e6-2b0b-45b2-8ee6-d2da51ec96e0 HTTP/1.1" 200 63
+WARNING 2021-10-08 22:46:37,951 log 224 Bad Request: /forgetpassword/
+WARNING 2021-10-08 22:46:37,959 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-10-08 22:46:40,521 basehttp 161 "GET /imagecode/?uuid=2cd19e24-261f-4a64-8d69-7b2ea964e502 HTTP/1.1" 200 2554
+INFO 2021-10-08 22:46:50,336 views 180 短信验证码: 487258
+INFO 2021-10-08 22:46:50,440 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=AJVP&uuid=2cd19e24-261f-4a64-8d69-7b2ea964e502 HTTP/1.1" 200 63
+INFO 2021-10-08 22:47:11,006 basehttp 161 "GET /imagecode/?uuid=d11c4d15-a646-4004-99f5-fa92105bdf80 HTTP/1.1" 200 3365
+INFO 2021-10-08 22:47:12,196 basehttp 161 "GET /imagecode/?uuid=02366e75-53fd-4391-b4f9-5d524103a2ac HTTP/1.1" 200 3014
+INFO 2021-10-08 22:47:13,449 basehttp 161 "GET /imagecode/?uuid=c6deb4c3-72cb-4f51-9c6c-30e06713bc91 HTTP/1.1" 200 3385
+WARNING 2021-10-08 22:47:22,315 log 224 Bad Request: /forgetpassword/
+WARNING 2021-10-08 22:47:22,315 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-10-08 22:47:26,968 basehttp 161 "GET /imagecode/?uuid=133b0b12-70e3-44b3-a859-48c4fd17d1ce HTTP/1.1" 200 3389
+INFO 2021-10-08 22:51:04,025 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 22:51:16,668 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-08 22:51:16,852 basehttp 161 "GET /imagecode/?uuid=404a89ac-b3ff-4747-93f1-b65275295d1b HTTP/1.1" 200 3173
+INFO 2021-10-08 22:51:17,526 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-08 22:51:17,678 basehttp 161 "GET /imagecode/?uuid=95e9972d-c26a-4493-8a14-0980aa0b6846 HTTP/1.1" 200 3522
+ERROR 2021-10-08 22:52:20,909 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 176, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-10-08 22:52:20,909 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=CXbW&uuid=95e9972d-c26a-4493-8a14-0980aa0b6846 HTTP/1.1" 500 82037
+INFO 2021-10-08 22:52:30,964 basehttp 161 "GET /imagecode/?uuid=87b60e20-098a-4f6a-91d2-84d1e628fa71 HTTP/1.1" 200 3215
+INFO 2021-10-08 22:52:38,627 views 180 短信验证码: 260566
+INFO 2021-10-08 22:52:40,008 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=MW85&uuid=87b60e20-098a-4f6a-91d2-84d1e628fa71 HTTP/1.1" 200 63
+WARNING 2021-10-08 22:52:50,668 log 224 Bad Request: /forgetpassword/
+WARNING 2021-10-08 22:52:50,668 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:05:44,949 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:05:48,438 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 23:05:51,723 basehttp 161 "GET /imagecode/?uuid=9946abf9-730e-4d4d-9f29-0660ff7efb4e HTTP/1.1" 200 3502
+INFO 2021-10-08 23:06:07,852 views 180 短信验证码: 807196
+INFO 2021-10-08 23:06:10,062 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=6SMA&uuid=9946abf9-730e-4d4d-9f29-0660ff7efb4e HTTP/1.1" 200 63
+WARNING 2021-10-08 23:06:33,048 log 224 Bad Request: /forgetpassword/
+WARNING 2021-10-08 23:06:33,048 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:08:29,556 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:08:34,442 basehttp 161 "GET /imagecode/?uuid=a8498a2e-1f0b-4f82-afdd-376c34e027d6 HTTP/1.1" 200 3094
+INFO 2021-10-08 23:08:35,091 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-08 23:08:35,227 basehttp 161 "GET /imagecode/?uuid=b08d0b8f-2f0c-42e3-b313-6dfd15e0b7f6 HTTP/1.1" 200 3215
+ERROR 2021-10-08 23:08:52,353 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 176, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-10-08 23:08:52,353 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=QL5U&uuid=b08d0b8f-2f0c-42e3-b313-6dfd15e0b7f6 HTTP/1.1" 500 82044
+INFO 2021-10-08 23:08:59,935 basehttp 161 "GET /imagecode/?uuid=cfefc7d3-0275-48f7-ba52-06029f4d16a1 HTTP/1.1" 200 3482
+INFO 2021-10-08 23:09:05,283 views 180 短信验证码: 877686
+INFO 2021-10-08 23:09:05,636 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=WWHI&uuid=cfefc7d3-0275-48f7-ba52-06029f4d16a1 HTTP/1.1" 200 63
+INFO 2021-10-08 23:09:14,453 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:09:14,469 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 23:09:22,765 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-08 23:09:33,107 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-08 23:09:45,618 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:09:45,618 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 23:13:09,875 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-08 23:13:14,679 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:14:53,588 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:14:56,044 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:14:56,124 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 23:14:58,906 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 23:15:00,757 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-08 23:15:01,313 basehttp 161 "GET /imagecode/?uuid=4c9f5c1d-b8f6-4f95-a578-e4f21bf30196 HTTP/1.1" 200 2786
+INFO 2021-10-08 23:15:20,322 basehttp 161 "GET /imagecode/?uuid=db128f17-1b3a-4f04-877d-04c9fe122061 HTTP/1.1" 200 2369
+INFO 2021-10-08 23:15:21,401 basehttp 161 "GET /imagecode/?uuid=146caf1c-a3a4-4d7a-8d5a-a3177f046b85 HTTP/1.1" 200 3212
+INFO 2021-10-08 23:15:35,797 views 180 短信验证码: 295928
+INFO 2021-10-08 23:15:36,109 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=LUHW&uuid=146caf1c-a3a4-4d7a-8d5a-a3177f046b85 HTTP/1.1" 200 63
+INFO 2021-10-08 23:15:44,865 basehttp 161 "POST /forgetpassword/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:15:44,881 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-08 23:15:57,928 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:15:57,936 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-08 23:16:01,695 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4712
+WARNING 2021-10-08 23:16:18,633 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:16:18,633 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:18:05,503 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:18:10,368 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:18:10,368 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:19:22,980 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:19:28,527 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:19:28,527 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:23:26,016 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:23:33,452 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:23:33,452 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:24:36,389 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:24:41,471 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:24:41,471 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:26:34,695 autoreload 250 D:\桌面\shixun\shixunblog\templates\writeblog.html changed, reloading.
+INFO 2021-10-08 23:26:36,271 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:26:51,853 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:26:56,750 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4649
+INFO 2021-10-08 23:27:46,534 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:27:48,043 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4654
+WARNING 2021-10-08 23:28:19,186 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:28:19,186 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:28:39,486 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:29:13,713 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4498
+INFO 2021-10-08 23:29:38,233 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:29:51,264 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4494
+INFO 2021-10-08 23:30:58,227 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:31:44,171 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4494
+INFO 2021-10-08 23:33:51,428 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:33:54,299 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4494
+INFO 2021-10-08 23:37:10,506 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-08 23:37:12,409 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:37:14,474 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 23:37:14,797 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2367
+INFO 2021-10-08 23:37:15,754 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 23:37:15,830 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2367
+INFO 2021-10-08 23:37:29,000 basehttp 161 "POST /admin/login/?next=/admin/login HTTP/1.1" 302 0
+INFO 2021-10-08 23:37:29,021 basehttp 161 "GET /admin/login HTTP/1.1" 301 0
+INFO 2021-10-08 23:37:29,052 basehttp 161 "GET /admin/login/ HTTP/1.1" 302 0
+INFO 2021-10-08 23:37:29,089 basehttp 161 "GET /admin/ HTTP/1.1" 200 4797
+INFO 2021-10-08 23:38:13,003 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:38:21,593 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4618
+INFO 2021-10-08 23:39:20,550 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:39:32,694 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4857
+WARNING 2021-10-08 23:39:54,503 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:39:54,503 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:41:07,732 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:41:13,566 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:41:13,567 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:41:45,447 autoreload 250 D:\桌面\shixun\shixunblog\templates\writeblog.html changed, reloading.
+INFO 2021-10-08 23:41:47,247 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:41:51,624 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:42:06,498 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:42:06,499 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:43:37,264 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:43:43,322 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:43:43,322 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:44:34,190 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:44:38,571 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:44:38,571 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:45:59,282 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:46:04,798 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:46:04,798 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:46:52,597 autoreload 250 D:\桌面\shixun\shixunblog\templates\writeblog.html changed, reloading.
+INFO 2021-10-08 23:46:54,250 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:46:57,831 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:47:03,161 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:47:03,161 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:47:36,448 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:47:41,728 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:47:41,736 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:49:42,159 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:49:46,604 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:49:46,604 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:50:47,619 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:50:51,805 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:50:51,805 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:52:09,481 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-08 23:52:11,058 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:52:53,326 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:52:59,195 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:52:59,195 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:53:38,366 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-08 23:53:44,703 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:53:44,703 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-08 23:57:02,824 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-08 23:58:05,983 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-08 23:58:12,668 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-08 23:58:12,668 log 224 Bad Request: /writeblog/
+WARNING 2021-10-08 23:58:12,668 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:02:07,901 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:02:08,405 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:02:08,405 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:02:08,405 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:03:35,953 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:03:38,927 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:03:38,935 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:03:38,935 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:04:12,591 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:04:12,927 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:04:12,927 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:04:12,927 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:05:54,667 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:05:56,315 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:06:22,218 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:07:00,497 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:07:05,570 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 7045
+INFO 2021-10-09 00:07:05,690 basehttp 161 "GET /static/js/writeblog.js HTTP/1.1" 200 2512
+WARNING 2021-10-09 00:07:23,414 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:07:23,414 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:08:11,338 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:08:13,066 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:09:02,733 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:09:04,230 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:09:20,746 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:09:22,298 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:09:26,757 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:09:29,069 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:09:37,306 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:09:50,672 views 440 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:09:50,672 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:09:50,672 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:12:25,230 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:12:28,265 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:12:34,006 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:12:42,402 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:12:44,112 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:12:46,443 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:12:46,448 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:12:47,219 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 00:12:53,577 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-09 00:13:02,413 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-09 00:13:10,183 basehttp 161 "POST /login.html/ HTTP/1.1" 200 4368
+INFO 2021-10-09 00:13:17,477 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:13:17,481 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:13:22,273 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 7045
+ERROR 2021-10-09 00:13:37,233 views 440 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:13:37,233 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:13:37,233 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:14:55,792 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:14:56,851 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:16:20,140 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:16:21,367 log 224 Internal Server Error: /writeblog/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 417, in post
+    user = request.User
+AttributeError: 'WSGIRequest' object has no attribute 'User'
+ERROR 2021-10-09 00:16:21,368 basehttp 161 "POST /writeblog/ HTTP/1.1" 500 83306
+INFO 2021-10-09 00:16:39,123 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:16:39,398 views 439 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:16:39,398 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:16:39,398 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:20:38,604 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:20:50,936 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 00:21:01,047 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:21:01,088 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:21:03,418 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 7045
+ERROR 2021-10-09 00:21:19,685 views 439 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:21:19,686 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:21:19,686 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:22:03,335 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:22:12,773 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:22:15,785 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 7045
+ERROR 2021-10-09 00:22:33,043 views 439 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:22:33,043 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:22:33,043 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:30:52,994 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:30:55,997 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:31:00,289 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:31:00,294 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:31:01,115 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 00:31:02,889 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-10-09 00:31:03,265 basehttp 161 "GET /imagecode/?uuid=db3f239a-b44b-4033-95b7-c6060fa2e9d3 HTTP/1.1" 200 2930
+ERROR 2021-10-09 00:31:35,346 log 224 Internal Server Error: /smscode/
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\users\views.py", line 176, in get
+    return JsonResponse({'code': RETCODE.IMAGECODEERR, 'errmsg': '图片验证码错误'})
+AttributeError: type object 'RETCODE' has no attribute 'IMAGECODEERR'
+ERROR 2021-10-09 00:31:35,349 basehttp 161 "GET /smscode/?mobile=15191544897&image_code=V3QC&uuid=db3f239a-b44b-4033-95b7-c6060fa2e9d3 HTTP/1.1" 500 82031
+INFO 2021-10-09 00:31:40,845 basehttp 161 "GET /imagecode/?uuid=c3cb3e4b-9ebb-4ddd-bc24-2ff24d099bec HTTP/1.1" 200 2969
+INFO 2021-10-09 00:31:45,580 views 180 短信验证码: 412914
+INFO 2021-10-09 00:31:45,865 basehttp 161 "GET /smscode/?mobile=15191544897&image_code=MYPD&uuid=c3cb3e4b-9ebb-4ddd-bc24-2ff24d099bec HTTP/1.1" 200 63
+INFO 2021-10-09 00:31:55,527 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:31:55,531 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:31:57,805 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 7045
+ERROR 2021-10-09 00:32:11,678 views 439 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:32:11,678 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:32:11,678 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:34:03,739 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 00:34:04,819 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:34:19,608 autoreload 250 D:\桌面\shixun\shixunblog\templates\writeblog.html changed, reloading.
+INFO 2021-10-09 00:34:20,965 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:34:44,257 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:34:51,706 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4712
+WARNING 2021-10-09 00:35:08,418 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:35:08,419 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-09 00:35:45,182 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-10-09 00:35:49,096 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:35:49,097 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 15
+INFO 2021-10-09 00:36:25,366 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:36:32,524 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4653
+ERROR 2021-10-09 00:36:43,091 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:36:43,091 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:36:43,091 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:37:07,285 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:37:12,281 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:37:22,192 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4653
+ERROR 2021-10-09 00:37:40,481 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:37:40,481 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:37:40,481 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:53:24,685 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 00:54:06,095 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-09 00:54:06,801 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 00:54:06,801 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 00:54:07,610 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 00:54:15,341 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 00:54:15,349 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 00:54:17,945 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4653
+ERROR 2021-10-09 00:54:34,512 views 442 (1054, "Unknown column 'author_id' in 'field list'")
+WARNING 2021-10-09 00:54:34,512 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:54:34,512 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 00:56:19,561 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 00:56:25,445 views 442 (1054, "Unknown column 'category_id' in 'field list'")
+WARNING 2021-10-09 00:56:25,445 log 224 Bad Request: /writeblog/
+WARNING 2021-10-09 00:56:25,445 basehttp 161 "POST /writeblog/ HTTP/1.1" 400 30
+INFO 2021-10-09 01:02:07,215 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 01:03:23,781 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-09 01:03:24,333 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 01:03:24,333 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 01:03:27,183 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 01:03:27,499 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-09 01:03:28,922 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 01:03:28,962 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-09 01:03:52,490 basehttp 161 "POST /admin/login/?next=/admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 01:03:52,514 basehttp 161 "GET /admin/login HTTP/1.1" 301 0
+INFO 2021-10-09 01:03:52,546 basehttp 161 "GET /admin/login/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:03:52,634 basehttp 161 "GET /admin/ HTTP/1.1" 200 3564
+INFO 2021-10-09 01:03:55,177 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6405
+INFO 2021-10-09 01:03:55,273 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-09 01:04:02,529 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:04:02,593 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6663
+INFO 2021-10-09 01:04:02,625 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-09 01:04:08,544 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:04:08,680 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6663
+INFO 2021-10-09 01:04:08,792 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-09 01:04:13,415 basehttp 161 "POST /admin/home/articlecategory/add/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:04:13,575 basehttp 161 "GET /admin/home/articlecategory/ HTTP/1.1" 200 6533
+INFO 2021-10-09 01:04:13,615 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-09 01:04:17,646 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 01:04:20,384 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 01:04:22,097 basehttp 161 "GET /register/ HTTP/1.1" 200 5939
+INFO 2021-10-09 01:04:22,689 basehttp 161 "GET /imagecode/?uuid=177de678-8265-4e7c-b4f0-223ae8a19845 HTTP/1.1" 200 3304
+INFO 2021-10-09 01:04:40,739 basehttp 161 "GET /imagecode/?uuid=a0651b64-2d6b-4dfd-bd44-17c49daf7151 HTTP/1.1" 200 3444
+INFO 2021-10-09 01:04:42,336 basehttp 161 "GET /imagecode/?uuid=289dc379-a908-4672-b83c-8a73bbe9cee6 HTTP/1.1" 200 3351
+INFO 2021-10-09 01:04:43,849 basehttp 161 "GET /imagecode/?uuid=95f144e9-3e26-4cbf-ad6c-736c40771102 HTTP/1.1" 200 3377
+INFO 2021-10-09 01:04:52,900 views 180 短信验证码: 276526
+INFO 2021-10-09 01:04:53,328 basehttp 161 "GET /smscode/?mobile=17868657068&image_code=XQZY&uuid=95f144e9-3e26-4cbf-ad6c-736c40771102 HTTP/1.1" 200 63
+INFO 2021-10-09 01:05:05,804 basehttp 161 "POST /register/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:05:05,812 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 01:05:08,111 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 01:05:24,494 basehttp 161 "POST /writeblog/ HTTP/1.1" 302 0
+INFO 2021-10-09 01:05:24,510 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 07:47:43,028 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 07:48:08,631 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-09 07:48:09,117 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 07:48:09,117 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 07:48:58,821 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 07:49:07,952 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 07:49:07,956 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 07:49:10,816 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4142
+INFO 2021-10-09 07:49:29,542 basehttp 161 "POST /usercenter/ HTTP/1.1" 302 0
+INFO 2021-10-09 07:49:29,570 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4159
+INFO 2021-10-09 07:49:29,587 basehttp 161 "GET /media/avatar/20211009/images.png HTTP/1.1" 200 4485
+INFO 2021-10-09 07:49:38,225 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 07:49:53,827 basehttp 161 "POST /writeblog/ HTTP/1.1" 302 0
+INFO 2021-10-09 07:49:53,831 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 07:49:56,995 basehttp 161 "GET /logout/ HTTP/1.1" 302 0
+INFO 2021-10-09 07:49:57,001 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 08:35:56,802 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 08:36:36,941 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 08:36:40,261 basehttp 161 "GET / HTTP/1.1" 200 17969
+WARNING 2021-10-09 08:36:40,862 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 08:36:40,862 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 08:36:41,950 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 08:36:51,920 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 08:36:51,925 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 08:36:54,235 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4159
+INFO 2021-10-09 08:36:54,261 basehttp 161 "GET /media/avatar/20211009/images.png HTTP/1.1" 304 0
+INFO 2021-10-09 08:36:58,157 basehttp 161 "POST /usercenter/ HTTP/1.1" 302 0
+INFO 2021-10-09 08:36:58,181 basehttp 161 "GET /usercenter/ HTTP/1.1" 200 4159
+INFO 2021-10-09 08:37:02,288 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 08:37:03,305 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 09:34:40,969 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 09:34:44,969 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 09:34:52,550 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 09:35:17,641 basehttp 161 "GET / HTTP/1.1" 200 17969
+INFO 2021-10-09 09:35:24,274 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 10:46:45,297 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 10:46:49,506 basehttp 161 "GET / HTTP/1.1" 200 17621
+WARNING 2021-10-09 10:46:50,299 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 10:46:50,299 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 10:46:59,177 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 10:47:03,228 basehttp 161 "GET /static/calmlog-index.html HTTP/1.1" 304 0
+INFO 2021-10-09 10:47:14,450 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 10:47:20,492 basehttp 161 "GET /forgetpassword/ HTTP/1.1" 200 5957
+INFO 2021-10-09 10:47:20,892 basehttp 161 "GET /imagecode/?uuid=fc500344-db27-4b9f-ac25-83c03a37b930 HTTP/1.1" 200 2779
+INFO 2021-10-09 10:47:27,812 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 10:47:27,856 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 10:47:35,631 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 10:47:51,065 basehttp 161 "POST /writeblog/ HTTP/1.1" 302 0
+INFO 2021-10-09 10:47:51,069 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 10:51:27,718 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-10-09 10:51:33,082 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 10:57:40,392 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-10-09 10:57:45,281 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 10:58:43,301 autoreload 250 D:\桌面\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-10-09 10:58:44,888 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 10:59:46,126 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 10:59:49,559 basehttp 161 "GET / HTTP/1.1" 200 17621
+WARNING 2021-10-09 10:59:50,128 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 10:59:50,128 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 11:00:00,994 basehttp 161 "GET /static/calmlog-index.html HTTP/1.1" 304 0
+INFO 2021-10-09 11:00:08,105 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 11:00:08,389 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-09 11:00:09,255 basehttp 161 "GET /admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 11:00:09,275 basehttp 161 "GET /admin/login/?next=/admin/login HTTP/1.1" 200 2222
+INFO 2021-10-09 11:00:18,943 basehttp 161 "POST /admin/login/?next=/admin/login HTTP/1.1" 302 0
+INFO 2021-10-09 11:00:18,978 basehttp 161 "GET /admin/login HTTP/1.1" 301 0
+INFO 2021-10-09 11:00:18,985 basehttp 161 "GET /admin/login/ HTTP/1.1" 302 0
+INFO 2021-10-09 11:00:19,049 basehttp 161 "GET /admin/ HTTP/1.1" 200 4502
+INFO 2021-10-09 11:00:26,304 basehttp 161 "GET /admin/home/articlecategory/add/ HTTP/1.1" 200 6405
+INFO 2021-10-09 11:00:26,361 basehttp 161 "GET /admin/jsi18n/ HTTP/1.1" 200 7748
+INFO 2021-10-09 11:02:01,813 autoreload 250 D:\桌面\shixun\shixunblog\users\views.py changed, reloading.
+INFO 2021-10-09 11:02:03,232 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:04:38,075 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:04:41,635 basehttp 161 "GET / HTTP/1.1" 200 17621
+WARNING 2021-10-09 11:04:42,195 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 11:04:42,196 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 11:04:44,594 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:04:50,928 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 11:04:50,936 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:04:57,768 basehttp 161 "GET /static/calmlog-index.html HTTP/1.1" 304 0
+INFO 2021-10-09 11:05:00,753 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:05:02,512 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:05:02,906 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:05:03,065 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:05:03,227 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:05:03,393 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:41,488 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:08:44,755 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:46,022 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:46,733 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:46,906 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,069 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,228 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,373 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,549 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,756 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:47,934 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,109 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,285 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,446 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,622 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,800 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:48,977 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:49,152 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:49,318 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:49,504 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:49,680 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:49,873 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:50,100 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:08:50,288 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:09:26,470 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:09:46,946 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:09:50,175 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:09:51,251 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:09:54,454 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:09:54,921 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:10:59,253 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:11:01,879 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:03,292 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:03,532 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:03,712 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:03,924 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:04,471 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:04,639 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:11:04,846 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:12:12,446 autoreload 250 D:\桌面\shixun\shixunblog\home\views.py changed, reloading.
+INFO 2021-10-09 11:12:16,809 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:13:30,893 autoreload 250 D:\桌面\shixun\shixunblog\home\views.py changed, reloading.
+INFO 2021-10-09 11:13:32,101 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:13:52,701 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:13:55,710 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:56,803 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:57,653 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:58,077 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:58,258 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:59,367 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:59,619 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:13:59,768 basehttp 161 "GET / HTTP/1.1" 200 17621
+INFO 2021-10-09 11:14:47,557 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:14:56,879 basehttp 161 "GET /static/calmlog-index.html HTTP/1.1" 304 0
+INFO 2021-10-09 11:15:01,949 basehttp 161 "GET / HTTP/1.1" 200 17284
+INFO 2021-10-09 11:15:02,912 basehttp 161 "GET / HTTP/1.1" 200 17284
+INFO 2021-10-09 11:15:03,174 basehttp 161 "GET / HTTP/1.1" 200 17284
+INFO 2021-10-09 11:16:50,005 autoreload 636 Watching for file changes with StatReloader
+ERROR 2021-10-09 11:16:58,766 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blogs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 21, in get
+    return render(request,'index.html',context={"list":acs})
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blogs' is not a registered namespace
+ERROR 2021-10-09 11:16:58,770 basehttp 161 "GET / HTTP/1.1" 500 139466
+INFO 2021-10-09 11:18:42,552 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:18:50,668 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+ERROR 2021-10-09 11:18:50,940 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blogs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 21, in get
+    return render(request,'index.html',context={"acs":acs})
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blogs' is not a registered namespace
+ERROR 2021-10-09 11:18:50,943 basehttp 161 "GET / HTTP/1.1" 500 140569
+INFO 2021-10-09 11:19:39,985 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:19:42,225 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:19:47,348 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+ERROR 2021-10-09 11:19:47,700 log 224 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'blogs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\python_code\code\beichen\lib\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\桌面\shixun\shixunblog\home\views.py", line 21, in get
+    return render(request,'index.html',context={"acs":acs})
+  File "D:\python_code\code\beichen\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\python_code\code\beichen\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\python_code\code\beichen\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'blogs' is not a registered namespace
+ERROR 2021-10-09 11:19:47,702 basehttp 161 "GET / HTTP/1.1" 500 140524
+INFO 2021-10-09 11:20:10,484 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:20:14,056 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:20:18,341 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 11:20:18,350 basehttp 161 "GET / HTTP/1.1" 200 17924
+INFO 2021-10-09 11:49:37,482 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:49:41,013 basehttp 161 "GET / HTTP/1.1" 200 13493
+INFO 2021-10-09 11:49:41,086 basehttp 161 "GET /media/article/2021/10/09/KTM_bwXEfd1.jpg HTTP/1.1" 200 65312
+WARNING 2021-10-09 11:49:41,430 log 224 Not Found: /favicon.ico
+WARNING 2021-10-09 11:49:41,430 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3850
+INFO 2021-10-09 11:49:43,508 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:49:46,242 basehttp 161 "GET /?cat_id=1 HTTP/1.1" 200 13493
+INFO 2021-10-09 11:49:50,560 basehttp 161 "GET /static/calmlog-details.html HTTP/1.1" 304 0
+INFO 2021-10-09 11:49:50,597 basehttp 161 "GET /static/temporary-img/artical-img1.jpg HTTP/1.1" 304 0
+INFO 2021-10-09 11:49:50,597 basehttp 161 "GET /static/temporary-img/artical-img2.jpg HTTP/1.1" 304 0
+INFO 2021-10-09 11:49:54,453 basehttp 161 "GET /login.html/ HTTP/1.1" 200 4347
+INFO 2021-10-09 11:50:02,444 basehttp 161 "POST /login.html/ HTTP/1.1" 302 0
+INFO 2021-10-09 11:50:02,508 basehttp 161 "GET / HTTP/1.1" 200 13493
+INFO 2021-10-09 11:50:04,796 basehttp 161 "GET /writeblog/ HTTP/1.1" 200 4580
+INFO 2021-10-09 11:50:35,098 basehttp 161 "POST /writeblog/ HTTP/1.1" 302 0
+INFO 2021-10-09 11:50:35,135 basehttp 161 "GET / HTTP/1.1" 200 13493
+INFO 2021-10-09 11:50:38,774 basehttp 161 "GET /?cat_id=1 HTTP/1.1" 200 13493
+INFO 2021-10-09 11:50:40,739 basehttp 161 "GET /?cat_id=2 HTTP/1.1" 200 13945
+INFO 2021-10-09 11:50:40,757 basehttp 161 "GET /media/article/2021/10/09/KTM_JVsD17t.jpg HTTP/1.1" 200 65312
+INFO 2021-10-09 11:51:26,377 basehttp 161 "GET /?cat_id=2&page_index=2 HTTP/1.1" 200 13945
+INFO 2021-10-09 11:51:26,438 basehttp 161 "GET /media/article/2021/10/09/747jpg_lpKPezi.jpg HTTP/1.1" 200 52486
+INFO 2021-10-09 11:51:30,059 basehttp 161 "GET /?cat_id=3 HTTP/1.1" 200 13485
+INFO 2021-10-09 11:51:30,130 basehttp 161 "GET /media/article/2021/10/09/KTM.jpg HTTP/1.1" 200 65312
+INFO 2021-10-09 11:51:33,331 basehttp 161 "GET /?cat_id=1 HTTP/1.1" 200 13493
+INFO 2021-10-09 11:52:37,999 autoreload 636 Watching for file changes with StatReloader

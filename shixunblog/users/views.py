@@ -275,7 +275,7 @@ class LogoutView(View):
 # 忘记密码
 class ForgetPasswordView(View):
     def get(self, request):
-        return render(request, "forget_password.html")
+        return render(request, "forgetpassword.html")
     def post(self, request):
         '''
         实现思路：
@@ -313,17 +313,18 @@ class ForgetPasswordView(View):
         # 2.4、判断确认密码是否一致
         if password != password2:
             return HttpResponseBadRequest('两次密码输入不一致')
-        # 2.5、判断短信验证码是否正确
+         # 2.5、判断短信验证码是否正确
         redis_conn = get_redis_connection('default')
         redis_sms_code = redis_conn.get('sms:%s' % mobile)
         if redis_sms_code is None:
             return HttpResponseBadRequest('短信验证码过期')
         try:
-            if redis_sms_code.decode().lower() != sms_code.lower:
+            if redis_sms_code.decode() != sms_code:
                 return HttpResponseBadRequest('验证码错误')
         except Exception as e:
             logger.error(e)
             return HttpResponseBadRequest('验证码错误')
+
         # 3、根据手机号码进行用户信息查询
         user = User.objects.filter(mobile=mobile).first()
         # 4、如果手机号查询出用户信息则进行用户密码的修改
@@ -417,6 +418,7 @@ class WriteBlogView(LoginRequiredMixin, View):
         sumary = request.POST.get('abstract')
         content = request.POST.get('content')
         user = request.user
+        print(avatar, title, category_id, sumary,tags, content)
         # 2、验证数据
         # 2-1、参数齐全验证
         if not all([avatar, title, category_id, sumary, content]):
@@ -434,10 +436,17 @@ class WriteBlogView(LoginRequiredMixin, View):
                 category=category,
                 tags=tags,
                 sumary=sumary,
-                content=content
+                content=content,
+                title=title
             )
         except Exception as e:
             logger.error(e)
             return HttpResponseBadRequest('发布失败，请稍后重试')
         # 4、跳转到指定页面
         return redirect(reverse('home:index'))
+
+
+
+
+
+
