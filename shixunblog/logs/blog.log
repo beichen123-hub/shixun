@@ -3711,3 +3711,16 @@ INFO 2021-10-09 11:51:30,059 basehttp 161 "GET /?cat_id=3 HTTP/1.1" 200 13485
 INFO 2021-10-09 11:51:30,130 basehttp 161 "GET /media/article/2021/10/09/KTM.jpg HTTP/1.1" 200 65312
 INFO 2021-10-09 11:51:33,331 basehttp 161 "GET /?cat_id=1 HTTP/1.1" 200 13493
 INFO 2021-10-09 11:52:37,999 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:57:01,353 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:57:02,769 basehttp 161 "GET / HTTP/1.1" 200 13493
+INFO 2021-10-09 11:57:02,910 basehttp 161 "GET /media/article/2021/10/09/KTM_bwXEfd1.jpg HTTP/1.1" 304 0
+WARNING 2021-10-09 11:57:04,827 basehttp 161 "GET /static/bootstrap/js/bootstrap.min.js.map HTTP/1.1" 404 1727
+WARNING 2021-10-09 11:57:04,832 basehttp 161 "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1733
+INFO 2021-10-09 11:58:48,458 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:58:52,856 basehttp 161 "GET / HTTP/1.1" 200 13492
+INFO 2021-10-09 11:58:52,897 basehttp 161 "GET /static/temporary-img/xxx.jpg HTTP/1.1" 200 41530
+INFO 2021-10-09 11:59:45,466 autoreload 250 D:\×ÀÃæ\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-10-09 11:59:47,214 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-10-09 11:59:47,730 basehttp 161 "GET / HTTP/1.1" 200 13453
+INFO 2021-10-09 12:00:11,296 autoreload 250 D:\×ÀÃæ\shixun\shixunblog\templates\index.html changed, reloading.
+INFO 2021-10-09 12:00:14,468 autoreload 636 Watching for file changes with StatReloader
