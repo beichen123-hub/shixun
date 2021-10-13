@@ -59,3 +59,23 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comment(models.Model):
+    # 评论内容
+    content = models.TextField()
+    # 评论的文章
+    article = models.ForeignKey(Article, on_delete=models.SET_NULL, null=True)
+    # 评论的用户
+    user = models.ForeignKey('users.User', on_delete=models.SET_NULL, null=True)
+    # 评论的时间
+    created_time = models.DateTimeField(auto_now_add=True)
+
+    # 方便输出调试信息
+    def __str__(self):
+        return self.article.title
+
+    # 修改表名以及admin展示的配置信息等
+    class Meta:
+        db_table = 'tb_comment'
+        verbose_name = '评论管理'
+        verbose_name_plural = verbose_name

@@ -1,9 +1,13 @@
 import logging
 
-from django.shortcuts import render
+from django.http import HttpResponseBadRequest
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views import View
 
 from home.models import *
+
+# from audioop import reverse
 
 # Create your views here.
 logger = logging.getLogger("django_log")
@@ -49,4 +53,58 @@ class IndexView(View):
             'cat_id':cat_id
         }
         return render(request, 'index.html', context=context)
+
+
+class DetailView(View) :
+    def get(self, request):
+        # 1、获取文章id
+        art_id = request.GET.get('art_id')
+        # 2、根据文章id查询文章信息
+        try:
+            art = Article.objects.get(id=art_id)
+        except Article.DoesNotExist:
+            return render(request,'404.html')
+        # 2-1、浏览量的简单做法:只要被查询一次，那么就算- - 次访问
+        art.total_views += 1
+        art.save()
+        # 2-2、重新查询文章信息，按照浏览量降序排序(热门标签)
+        hot_tags = Article.objects.values('tags').order_by('-total_views').distinct()[:9]
+        # 2-3、最新文章
+        new_arts = Article.objects.order_by('-create_time')[:2]
+        # 2-4、获取所有评论信息
+        comm = Comment.objects.filter(article=art).order_by('-created_time')
+        # 3、返回页面
+        context = {
+            'article': art,
+            'hot_tags': hot_tags,
+            'new_arts': new_arts,
+            'comms': comm
+        }
+        print(hot_tags,new_arts)
+        return render(request,'detail.html', context=context)
+    def post(self,request):
+        # 1、获取已登录用户信息
+        user = request.user
+        # 2、判断用户是否登录
+        if user and user.is_authenticated:
+            # 3、登录用户才可以接收form数据
+            # 3-1、接收评论数据
+            art_id = request.POST.get('art_id')
+            content = request.POST.get('content')
+            # 3-2、验证文章是否存在.
+            try:
+                art = Article.objects.get(id=art_id)
+            except Article.DoesNotExist:
+                return HttpResponseBadRequest('该文章不存在')
+            # 3-3、保存评论数据
+            Comment.objects.create(content=content, article=art, user=user)
+            # 3-4、 修改文章的评论数量
+            art.comments_count += 1
+            art.save()
+            # 刷新当前页面
+            req_url = request.path + '?art_id=' + art_id
+            return redirect(req_url)
+        else:
+            # 4、未登录用户则跳转到登录页面.
+            return redirect(reverse('users:login'))
 

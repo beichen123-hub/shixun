@@ -8,11 +8,13 @@
 # IDE      : PyCharm 
 # project name:shixunblog
 from django.urls import path
-from home.views import IndexView # 导入注册视图
 
+from home.views import IndexView, DetailView
 
 urlpatterns = [
 
     path('',IndexView.as_view(), name='index'),
+    path('detail/index.html',IndexView.as_view(), name='index'),
+    path('detail/',DetailView.as_view(), name='detail'),
 
 ]

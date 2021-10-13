@@ -1,0 +1,123 @@
+{% extends 'base.html'%}
+{% block content%}
+    {% load static %}
+    <div class="cl-cantainer container">
+    <div class="cl-artical-content">
+                <h2 class="cl-artical-title">{{ article.title }}</h2>
+                <div class="cl-card-tag">
+                    <div><span>{{ article.total_views }}</span>人浏览 / <span>{{ article.comments_count }}</span>人评论</div><span>{{ art.create_time }}</span>
+                </div>
+                <div class="cl-artical">
+                    <p>
+                        {{ article.content| safe }}
+                    </p>
+                    <p><img src="{{ article.avatar.url }}" alt=""></p>
+                </div>
+            </div>
+            <div class="recommend-panel">
+                <h4 class="right-card-title">相关文章</h4>
+                <div class="card-deck">
+                    <div class="card ll-panel">
+                        <a class="recommend-panel-link" href="detail.html">
+                            <div class="recommend-panel-top">
+                                <img src="../static/temporary-img/list-image1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="recommend-panel-bottom">
+                                如何有效避免设计作品“空”？
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card ll-panel">
+                        <a class="recommend-panel-link" href="detail.html">
+                            <div class="recommend-panel-top">
+                                <img src="../static/temporary-img/list-image2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="recommend-panel-bottom">
+                                高点击率钻展，设计环节…
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card ll-panel">
+                        <a class="recommend-panel-link" href="detail.html">
+                            <div class="recommend-panel-top">
+                                <img src="../static/temporary-img/list-image3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="recommend-panel-bottom">
+                                无敌配色技巧（一）
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+
+
+                <form class="cl-comment-from" method="post">
+                    <input type="hidden" name="art_id" value="{{ article.id }}">
+                    <div><textarea placeholder="说点什么吧..." rows="1" name="content"></textarea></div>
+                    <button type="submit">留言</button>
+                    <span class="clearfix"></span>
+                </form>
+
+
+                <h4 class="right-card-title">全部评论</h4>
+                <div class="comment-panel">
+                    <div class="comment-panel-portrait">
+                        <img src="../static/img/portrait.png" class="img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="comment-panel-content">
+                        <div class="comment-panel-content-item">
+                            <div class="comment-author">晴天下起了小雨</div>
+                            <div>2017-10-01 18:00</div>
+                        </div>
+                        <div class="comment-panel-content-main">很喜欢，果断关注了</div>
+                    </div>
+                    <span class="clearfix"></span>
+                    <div class="text-primary"><a href="">回复</a></div>
+                </div>
+                {% for comm in comms %}
+                            <div class="comment-panel">
+                            <div class="comment-panel-portrait">
+                                <img src="{{ comm.user.avatar.url }}" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <div class="comment-panel-content">
+                                <div class="comment-panel-content-item">
+                                    <div class="comment-author">{{ comm.user.username }}</div>
+                                    <div>{{ comm.created_time }}</div>
+                                </div>
+                                <div class="comment-panel-content-main">{{ comm.content }}</div>
+                            </div>
+                            <span class="clearfix"></span>
+                                <div class="text-primary"><a href="">回复</a> </div>
+                            </div>
+                        {% endfor %}
+                <div class="comment-panel">
+                    <div class="comment-panel-portrait">
+                        <img src="../static/img/portrait.png" class="img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="comment-panel-content" >
+                        <div class="comment-panel-content-item">
+                            <div class="comment-author">wjmyly7336064</div>
+                            <div>2017-10-01 18:00</div>
+                        </div>
+                        <div class="comment-panel-content-main">相当实用，赞美了</div>
+                        <!--comment-secondary-panel-->
+                        <div class="comment-secondary-panel">
+                            <span class="triangle-icon"><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
+                            <div class="comment-panel-content">
+                                <div class="comment-panel-content-item">
+                                    <div class="comment-author">橘大佬</div>
+                                    <div>2017-10-01 18:00</div>
+                                </div>
+                                <div class="comment-panel-content-main">就是有些细节再到位点就好了…</div>
+                            </div>
+                            <span class="clearfix"></span>
+                            <span class="clearfix"></span>
+                        <div class="text-primary"><a href="">回复</a></div>
+                        </div>
+                        <!---->
+                        </div>
+                </div>
+            </div>
+    </div>
+{% endblock %}

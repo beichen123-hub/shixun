@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>用户中心</title>
+    <title>厚浦博客</title>
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/cl-css.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="header-content container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="/">
-                    <img src="{% static 'img/avengers.png' %}" width="144" height="72" alt="">
+                    <img src="{% static 'img/avengers.png' %}" width="100" height="82" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,42 +46,10 @@
         </div>
     </div>
     <div class="cl-cantainer container pt-5">
-         <form class="col-md-6 offset-md-3" method="post" enctype="multipart/form-data">
+        <form class="col-md-6 offset-md-3" method="post">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="username">用户名</label>
-                <input type="text" class="form-control" id="username" name="username" value="{{ username }}">
-            </div>
-            <!--<br><h5 class="col-md-4">暂无头像</h5><br>-->
-            <br>
-            {% if avatar %}
-                <img src="{{ avatar }}"
-                     style="max-width: 20%;" class="img-thumbnail"><br>
-            {% else %}
-                <img src="{% static '/img/portrait.png' %}"
-                     style="max-width: 20%;" class="img-thumbnail"><br>
-            {% endif %}
-
-            <!-- avatar -->
-            <div class="form-group">
-                <label for="avatar">上传头像</label>
-                <input type="file" class="form-control-file" name="avatar" id="avatar">
-            </div>
-
-            <!-- phone -->
-            <div class="form-group">
-                <label for="phone">电话</label>
-                <input type="text" class="form-control" disabled="disabled" id="phone" name="phone" value="{{ mobile }}">
-            </div>
-            <!-- desc -->
-            <div class="form-group">
-                <label for="desc">简介</label>
-                <!-- 文本区域 -->
-                <textarea type="text" class="form-control" id="desc" name="desc" rows="5">{{ user_desc }}</textarea>
-            </div>
-            <!-- 提交按钮 -->
-            <button type="submit" class="btn btn-primary" style="margin-left: 12px">修改</button>
-
+            {% block connect %}
+            {% endblock %}
         </form>
     </div>
     <div class="container-fluid cl-footer">

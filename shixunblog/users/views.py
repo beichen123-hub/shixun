@@ -1,3 +1,4 @@
+import json
 import logging  # 导入logging包
 import re  # 导入正则表达式包
 from random import randint  # 导入随机数包
@@ -238,16 +239,21 @@ class LoginView(View):
             resp = redirect(next_page)
         else:
             resp = redirect(reverse('home:index'))
-        # 5、根据用户选择的是否记住登录状态进行判断
-        if remember != 'on':    # 用户没有勾选复选框
+        if remember != 'on':  # 用户没有勾选复选框
             resp.set_cookie('is_login', True)
-            resp.set_cookie('login_name', return_user.username)
+            # 如果username是中文，设置cookies时会报错
+            # cookie 中文编码处理
+            username = json.dumps(return_user.username)
+            resp.set_cookie('login_name',username)
             request.session.set_expiry(0)  # 表示浏览器关闭时清除
         else:
             # 设置2周内的cookie
-            resp.set_cookie('is_login', True, max_age=24*3600*14)
-            resp.set_cookie('login_name', return_user.username, max_age=24*3600*14)
-            request.session.set_expiry(None)    # 表示设置默认时常，默认就是2周时间
+            resp.set_cookie('is_login', True, max_age=24 * 3600 * 14)
+            # 如果username是中文，设置cookies时会报错
+            # cookie 中文编码处理
+            resp.set_cookie('is_login', True, max_age=24 * 3600 * 14)
+            resp.set_cookie('login_name', return_user.username, max_age=24 * 3600 * 14)
+            request.session.set_expiry(None)  # 表示设置默认时常，默认就是2周时间
         return resp
 
 
@@ -444,9 +450,6 @@ class WriteBlogView(LoginRequiredMixin, View):
             return HttpResponseBadRequest('发布失败，请稍后重试')
         # 4、跳转到指定页面
         return redirect(reverse('home:index'))
-
-
-
 
 
 

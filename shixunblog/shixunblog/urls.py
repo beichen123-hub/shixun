@@ -37,7 +37,8 @@ urlpatterns = [
     # include 参数2 namespace 设置命名空间。这里设置为子应用名
     path('', include(('users.urls', 'users'), namespace='users')),
     # 主页路由
-    path('', include(('home.urls', 'home'), namespace='home'))
+    path('', include(('home.urls', 'home'), namespace='home')),
+    path('', include(('errors.urls', 'errors'), namespace='errors')),
 ]
 # 以下代码为设置图片访问路由规则
 
