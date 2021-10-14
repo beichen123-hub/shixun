@@ -17,36 +17,18 @@
             <div class="recommend-panel">
                 <h4 class="right-card-title">相关文章</h4>
                 <div class="card-deck">
+                     {% for art in art %}
                     <div class="card ll-panel">
-                        <a class="recommend-panel-link" href="detail.html">
+                        <a class="recommend-panel-link" href="{% url 'home:detail' %}?art_id={{ art.id }}">
                             <div class="recommend-panel-top">
-                                <img src="../static/temporary-img/list-image1.jpg" class="img-fluid" alt="">
+                                <img src="{{ art.avatar.url }}" class="img-fluid" alt="">
                             </div>
                             <div class="recommend-panel-bottom">
-                                如何有效避免设计作品“空”？
+                                {{ art.title }}
                             </div>
                         </a>
                     </div>
-                    <div class="card ll-panel">
-                        <a class="recommend-panel-link" href="detail.html">
-                            <div class="recommend-panel-top">
-                                <img src="../static/temporary-img/list-image2.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="recommend-panel-bottom">
-                                高点击率钻展，设计环节…
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card ll-panel">
-                        <a class="recommend-panel-link" href="detail.html">
-                            <div class="recommend-panel-top">
-                                <img src="../static/temporary-img/list-image3.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="recommend-panel-bottom">
-                                无敌配色技巧（一）
-                            </div>
-                        </a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="comment">

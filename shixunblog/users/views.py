@@ -1,9 +1,9 @@
-import json
 import logging  # 导入logging包
 import re  # 导入正则表达式包
 from random import randint  # 导入随机数包
 
-from django.contrib.auth import login, authenticate, logout  # 实现状态保持
+from django.contrib import auth
+from django.contrib.auth import login  # 实现状态保持
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db import DataError  # 导入数据库异常包
 from django.http.response import HttpResponseBadRequest
@@ -21,6 +21,7 @@ from utils.response_code import RETCODE  # 导入自定义相应码
 
 logger = logging.getLogger("django")
 
+
 # Create your views here.
 # CBV
 
@@ -30,6 +31,7 @@ class RegisterView(View):
     # 注册页面展示
     def get(self, request):
         return render(request, "register.html")
+
     def post(self, request):
         """
         实现思路：
@@ -90,7 +92,7 @@ class RegisterView(View):
         # 设置cookie以方便首页中用户信息进行判断和用户新的展示
         resp.set_cookie('is_login', True)
         # 通过cookie传递登录用户名，过期时间为1天
-        resp.set_cookie('login_name', user.username, max_age=1*24*3600)
+        resp.set_cookie('login_name', user.username, max_age=1 * 24 * 3600)
         # 4、返回响应跳转到指定页面
         # redirect是进行页面重定向
         # reverse是可以通过namespace:name来获取视图所对应的路由
@@ -189,99 +191,100 @@ class SmsCodeView(View):
 
 # 登录
 class LoginView(View):
-    def get(self, request):
-        return render(request, "login.html")
-    def post(self, request):
-        '''
-       实现思路：
-       1、接收提交参数
-       2、验证参数
-        2-1、手机号码是否符合规则
-        2-2、密码是否符合规则
-       3、用户认证登录
-       4、状态保持
-       5、根据用户选择的是否记住登录状态进行判断
-       6、设置cookie信息，为首页显示服务
-       7、跳转到首页
-       :param request:
-       :return:
-       '''
-        # 1、接收提交参数
-        username = request.POST.get("mobile")
-        password = request.POST.get("password")
-        remember = request.POST.get("remember")
-        # 2、验证参数
-        if not all([username, password]):
-            return render(request, template_name="login.html", context={'msg': '账号或密码不能为空'})
-        # 2 - 1、手机号码是否符合规则
-        if not re.match('^1[3-9]\d{9}$', username):
-            return render(request, template_name="login.html", context={'msg': '手机号格式不正确'})
-        # 2 - 2、密码是否符合规则
-        if not re.match('^[a-z0-9A-Z]{8,20}$', password):
-            return render(request, template_name="login.html", context={'msg': '密码格式不正确'})
-        # 3、用户认证登录
-        # 采用系统自带的认证方法进行认证
-        # 如果用户名和密码正确，会返回true,否则返回False
-        # 默认的认证方法是：针对username字段进行用户名的判断，当前的判断信息是“手机号”，所以需要修改以下认证信息
-        return_user = authenticate(mobile=username, password=password)
-        if return_user == None:
-            return render(request, template_name="login.html", context={'msg': '账号或密码错误'})
-        # print(return_user)
-        # 判断如果是NONE,就表示用户名或密码是错误的
+    '''
+           实现思路：
+           1、接收提交参数
+           2、验证参数
+            2-1、手机号码是否符合规则
+            2-2、密码是否符合规则
+           3、用户认证登录
+           4、状态保持
+           5、根据用户选择的是否记住登录状态进行判断
+           6、设置cookie信息，为首页显示服务
+           7、跳转到首页
+           :param request:
+           :return:
+           '''
+    def get(self,request):
+        return render(request,'login.html')
+
+
+    def post(self,request):
+        # 接收提交参数
+        mobile=request.POST.get("mobile")
+        password=request.POST.get("password")
+        remember=request.POST.get("remember")
+        if not all([mobile,password]):
+            return render(request,'login.html',{'msg':'参数不齐全'})
+        # 手机号码是否符合规则
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return render(request,'login.html',{'msg':'手机号码格式不正确'})
+        # 密码是否符合规则
+        if not re.match('^[a-z0-9A-Z]{8,20}$',password):
+            return render(request,'login.html',{'msg':'密码格式不正确'})
+        # 使用django系统自带的用户认证代码，将会返回一个user对象，如果账号密码正确就还返回该对象否则返回None
+        return_user = auth.authenticate(mobile=mobile, password=password)
+        print(return_user)
         if return_user is None:
-            return render(request, "login.html")
-        # 4、状态保持
-        login(request,return_user)
-        # 7、跳转到首页
-        # 根据匿名登录跳转参数next,跳转到指定页面
+            return render(request,'login.html',{'msg':'账号或密码错误'})
+        request.session['name'] = return_user
+        # 状态保持
+        login(request, return_user)
+        print('sss')
+        # print(login(request, return_user))
+        # 6、设置cookie信息，为首页显示服务
+        # 根据匿名登录跳转参数next，跳转到指定页面
         next_page = request.GET.get('next')
         if next_page:
             resp = redirect(next_page)
         else:
             resp = redirect(reverse('home:index'))
-        if remember != 'on':  # 用户没有勾选复选框
-            resp.set_cookie('is_login', True)
-            # 如果username是中文，设置cookies时会报错
-            # cookie 中文编码处理
-            username = json.dumps(return_user.username)
-            resp.set_cookie('login_name',username)
-            request.session.set_expiry(0)  # 表示浏览器关闭时清除
+        # 根据用户选择的是否记住登录状态进行判断
+        if remember != 'on':
+
+            resp.set_cookie('is_login',True)
+            resp.set_cookie('login_name',return_user.username)
+            request.session.set_expiry(0)
         else:
-            # 设置2周内的cookie
-            resp.set_cookie('is_login', True, max_age=24 * 3600 * 14)
-            # 如果username是中文，设置cookies时会报错
-            # cookie 中文编码处理
-            resp.set_cookie('is_login', True, max_age=24 * 3600 * 14)
-            resp.set_cookie('login_name', return_user.username, max_age=24 * 3600 * 14)
-            request.session.set_expiry(None)  # 表示设置默认时常，默认就是2周时间
+            resp.set_cookie('is_login', True,max_age=14*24*3600)
+            resp.set_cookie('login_name', return_user.username,max_age=14*24*3600)
+            request.session.set_expiry(None)#设置session的过期时间为默认值
+
         return resp
 
 
-# 退出登录
+# 退出登录视图
+
+
 class LogoutView(View):
     def get(self, request):
         '''
-        实现思路
+        实现思路：
         1、清除session数据
         2、删除cookie数据
         3、跳转到首页
         :param request:
         :return:
         '''
-        # 1、
-        # 清除session数据
-        logout(request)
-        resp = redirect(reverse("home:index"))
-        # 删除cookie数据
-        resp.delete_cookie('is_login')
-        resp.delete_cookie('login_name')
-        return resp
+        # 实现思路：
+        # 1、清楚session数据
+        # logout(request)
+        request.session.flush()
+        # resp = redirect(reverse('home:index'))
+        # print('ssss')
+        # resp.delete_cookie('is_login')
+        # resp.delete_cookie('login_name')
+        # 2、删除cookie数
+        # 3、跳转到首页
+        # return resp
+        return redirect(reverse('home:index'))
 
 
 # 忘记密码
 class ForgetPasswordView(View):
     def get(self, request):
         return render(request, "forgetpassword.html")
+
     def post(self, request):
         '''
         实现思路：
@@ -319,7 +322,7 @@ class ForgetPasswordView(View):
         # 2.4、判断确认密码是否一致
         if password != password2:
             return HttpResponseBadRequest('两次密码输入不一致')
-         # 2.5、判断短信验证码是否正确
+        # 2.5、判断短信验证码是否正确
         redis_conn = get_redis_connection('default')
         redis_sms_code = redis_conn.get('sms:%s' % mobile)
         if redis_sms_code is None:
@@ -361,8 +364,10 @@ LoginRequiredMixin:封装了判断用户是否登录的操作
 3、需要在setting中设置默认登录地址访问LOGIN_URL = '/login/'
 4、在登录该视图的post方法中，判断next有值跳转
 '''
+
+
 # 用户中心
-class UserCenterView(LoginRequiredMixin ,View):
+class UserCenterView(LoginRequiredMixin, View):
     def get(self, requset):
         # 需要判断用户是否登录，根据用户是否登录的结果，决定用户是否可以访问用户中心
         # if not requset.user.is_authenticated:     # 判断用户是否登录，如果通过登录验证则返回true，否则返回false
@@ -374,7 +379,8 @@ class UserCenterView(LoginRequiredMixin ,View):
             'avatar': userinfo.avatar.url if userinfo.avatar else None,
             'user_desc': userinfo.user_desc,
         }
-        return render(requset,'usercenter.html', context=context)
+        return render(requset, 'usercenter.html', context=context)
+
     def post(self, request):
         userinfo = request.user
         username = request.POST.get('username')
@@ -397,15 +403,20 @@ class UserCenterView(LoginRequiredMixin ,View):
         return resp
 
 
-
 class WriteBlogView(LoginRequiredMixin, View):
     def get(self, requset):
-        # 获取所有分类信息
-        categories = ArticleCategory.objects.all()
-        context = {
-            'categories': categories
-        }
-        return render(requset, 'writeblog.html', context=context)
+        if requset.session.get('name'):
+
+            # 获取所有分类信息
+            categories = ArticleCategory.objects.all()
+            context = {
+                'list': categories
+            }
+            return render(requset, 'writeblog.html', context=context)
+
+        return redirect(reverse('home:index'))
+
+
     def post(self, request):
         '''
         实现思路：
@@ -417,14 +428,14 @@ class WriteBlogView(LoginRequiredMixin, View):
         :return:
         '''
         # 1、接收数据
-        avatar = request.FILES.get('Illustration')
+        avatar = request.FILES.get('avatar')
         title = request.POST.get('title')
-        category_id = request.POST.get('column')
+        category_id = request.POST.get('category')
         tags = request.POST.get('tags')
-        sumary = request.POST.get('abstract')
+        sumary = request.POST.get('sumary')
         content = request.POST.get('content')
         user = request.user
-        print(avatar, title, category_id, sumary,tags, content)
+        print(avatar, title, category_id, sumary, tags, content)
         # 2、验证数据
         # 2-1、参数齐全验证
         if not all([avatar, title, category_id, sumary, content]):
@@ -450,6 +461,3 @@ class WriteBlogView(LoginRequiredMixin, View):
             return HttpResponseBadRequest('发布失败，请稍后重试')
         # 4、跳转到指定页面
         return redirect(reverse('home:index'))
-
-
-

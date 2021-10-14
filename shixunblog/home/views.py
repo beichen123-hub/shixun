@@ -61,26 +61,27 @@ class DetailView(View) :
         art_id = request.GET.get('art_id')
         # 2、根据文章id查询文章信息
         try:
-            art = Article.objects.get(id=art_id)
+            article = Article.objects.get(id=art_id)
         except Article.DoesNotExist:
             return render(request,'404.html')
         # 2-1、浏览量的简单做法:只要被查询一次，那么就算- - 次访问
-        art.total_views += 1
-        art.save()
+        article.total_views += 1
+        article.save()
         # 2-2、重新查询文章信息，按照浏览量降序排序(热门标签)
         hot_tags = Article.objects.values('tags').order_by('-total_views').distinct()[:9]
         # 2-3、最新文章
         new_arts = Article.objects.order_by('-create_time')[:2]
         # 2-4、获取所有评论信息
-        comm = Comment.objects.filter(article=art).order_by('-created_time')
+        comm = Comment.objects.filter(article=article).order_by('-created_time')
+        art = Article.objects.all().order_by('-create_time')[:3]
         # 3、返回页面
         context = {
-            'article': art,
+            'article': article,
             'hot_tags': hot_tags,
             'new_arts': new_arts,
-            'comms': comm
+            'comms': comm,
+            'art':art
         }
-        print(hot_tags,new_arts)
         return render(request,'detail.html', context=context)
     def post(self,request):
         # 1、获取已登录用户信息

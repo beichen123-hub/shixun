@@ -22,7 +22,7 @@ urlpatterns = [
     # 短信验证码
     path('smscode/',SmsCodeView.as_view(), name='smscode'),
     path('login/',LoginView.as_view(), name='login'),
-    path('login.html/',LoginView.as_view(), name='login'),
+    # path('login.html/',LoginView.as_view(), name='login'),
     path('logout/',LogoutView.as_view(), name='logout'),
     path('forgetpassword/',ForgetPasswordView.as_view(),name='forgetpassword'),
     path('usercenter/', UserCenterView.as_view(), name='usercenter'),
