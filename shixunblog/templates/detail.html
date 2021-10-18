@@ -17,14 +17,14 @@
             <div class="recommend-panel">
                 <h4 class="right-card-title">相关文章</h4>
                 <div class="card-deck">
-                     {% for art in art %}
+                     {% for rel in related %}
                     <div class="card ll-panel">
-                        <a class="recommend-panel-link" href="{% url 'home:detail' %}?art_id={{ art.id }}">
+                        <a class="recommend-panel-link" href="{% url 'home:detail' %}?art_id={{ rel.id }}">
                             <div class="recommend-panel-top">
-                                <img src="{{ art.avatar.url }}" class="img-fluid" alt="">
+                                <img src="{{ rel.avatar.url }}" class="img-fluid" alt="">
                             </div>
                             <div class="recommend-panel-bottom">
-                                {{ art.title }}
+                                {{ rel.title }}
                             </div>
                         </a>
                     </div>
@@ -73,33 +73,6 @@
                                 <div class="text-primary"><a href="">回复</a> </div>
                             </div>
                         {% endfor %}
-                <div class="comment-panel">
-                    <div class="comment-panel-portrait">
-                        <img src="../static/img/portrait.png" class="img-fluid rounded-circle" alt="">
-                    </div>
-                    <div class="comment-panel-content" >
-                        <div class="comment-panel-content-item">
-                            <div class="comment-author">wjmyly7336064</div>
-                            <div>2017-10-01 18:00</div>
-                        </div>
-                        <div class="comment-panel-content-main">相当实用，赞美了</div>
-                        <!--comment-secondary-panel-->
-                        <div class="comment-secondary-panel">
-                            <span class="triangle-icon"><i class="fa fa-sort-asc" aria-hidden="true"></i></span>
-                            <div class="comment-panel-content">
-                                <div class="comment-panel-content-item">
-                                    <div class="comment-author">橘大佬</div>
-                                    <div>2017-10-01 18:00</div>
-                                </div>
-                                <div class="comment-panel-content-main">就是有些细节再到位点就好了…</div>
-                            </div>
-                            <span class="clearfix"></span>
-                            <span class="clearfix"></span>
-                        <div class="text-primary"><a href="">回复</a></div>
-                        </div>
-                        <!---->
-                        </div>
-                </div>
             </div>
     </div>
 {% endblock %}

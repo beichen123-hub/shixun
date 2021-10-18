@@ -12,7 +12,7 @@ from home.models import *
 # Create your views here.
 logger = logging.getLogger("django_log")
 
-
+# 主页界面
 class IndexView(View):
     def get(self, request):
         # 1、获取所有的文字分类
@@ -33,7 +33,7 @@ class IndexView(View):
 
         # 4、获取分页参数
         page_index = request.GET.get('page_index', 1)  # 页码
-        page_size = request.GET.get('page_size', 1)  # 页容量
+        page_size = request.GET.get('page_size', 2)  # 页容量
         # 6、创建分页器
         from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger  # 导入django分页插件
         # Paginator(待分页的对象, 页容量)
@@ -45,16 +45,19 @@ class IndexView(View):
             list = pages.page(1)  # 如果用户输入的页面不是整数时，显示第1页的内容
         except EmptyPage:
             list = pages.page(pages.num_pages)  # 如果用户输入的页数不在系统的页码列表中时,显示最后一页的内容
+        # 最新文章
+        new_art = Article.objects.order_by("-create_time")[:4]
         # 4、组织数据传递给模板
         context = {
             'categories': acs,
             'category': ac,
             'articles': list,
-            'cat_id':cat_id
+            'cat_id':cat_id,
+            "new_art": new_art
         }
         return render(request, 'index.html', context=context)
 
-
+# 文章详情
 class DetailView(View) :
     def get(self, request):
         # 1、获取文章id
@@ -68,19 +71,21 @@ class DetailView(View) :
         article.total_views += 1
         article.save()
         # 2-2、重新查询文章信息，按照浏览量降序排序(热门标签)
-        hot_tags = Article.objects.values('tags').order_by('-total_views').distinct()[:9]
+        # hot_tags = Article.objects.values('tags').order_by('-total_views').distinct()[:9]
         # 2-3、最新文章
-        new_arts = Article.objects.order_by('-create_time')[:2]
+        # new_art = Article.objects.order_by('-create_time')[:2]
         # 2-4、获取所有评论信息
         comm = Comment.objects.filter(article=article).order_by('-created_time')
         art = Article.objects.all().order_by('-create_time')[:3]
+        related = Article.objects.all().order_by(('-title'))[:3]
         # 3、返回页面
         context = {
             'article': article,
-            'hot_tags': hot_tags,
-            'new_arts': new_arts,
+            # 'hot_tags': hot_tags,
+            # 'new_arts': new_art,
             'comms': comm,
-            'art':art
+            'art':art,
+            'related':related,
         }
         return render(request,'detail.html', context=context)
     def post(self,request):

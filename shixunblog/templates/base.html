@@ -15,7 +15,7 @@
 <div class="cl-header container-fluid" id="app">
     <div class="header-content container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{% url 'home:index' %}">
                 <img src="../static/img/LOGO.jpg" width="300" height="120" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -92,7 +92,7 @@
             <div class="right-card">
 
                 <div class="right-card-main">
-                    <div class="right-card-title">组织</div>
+                    <div class="right-card-title" align="center">组织</div>
                     <div class="cl-code">
                         <img src="../static/img/source.gif" class="img-fluid" alt="">
                         <p> --Ready To Race-- </p>
@@ -110,8 +110,8 @@
                             src="../static/temporary-img/art4.png"
                             class="img-fluid" alt=""></a></div>
                     <ul class="right-recommended-list">
-                        {% for foo in newsArtcle %}
-                            <li><a href="{% url 'home:details' %}?art_id={{ foo.id }}"><i class="fa fa-angle-right"
+                        {% for foo in new_art %}
+                            <li><a href="{% url 'home:detail' %}?art_id={{ foo.id }}"><i class="fa fa-angle-right"
                                                                                           aria-hidden="true"></i>{{ foo.title }}
                             </a></li>
                         {% endfor %}
@@ -125,7 +125,7 @@
                     <div class="right-card-title">热门标签</div>
                     <ul class="label">
                         {% for hot_tag in hot_tags %}
-                            <li><a href="#">{{ hot_tag.tags }}</a></li>
+                            <li><a href="{% url 'home:detail' %}?art_id={{ hot_tag.id }}">{{ hot_tag.tags }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -137,8 +137,8 @@
 </div>
 <div class="container-fluid cl-footer">
     <div class="container">
-        <p class="cl-copyright">本设计由简.工作室荣誉出品</p>
-        <p class="cl-copyright">copyright @ 2017~2018 简.工作室（www.jeanstudio.cn）</p>
+        <p class="cl-copyright">本设计由北辰.空间荣誉出品</p>
+        <p class="cl-copyright">Ready To Race @ 2020~2021 北.辰</p>
     </div>
 </div>
 <script src="{% static 'jquery/jquery.min.js' %}"></script>

@@ -224,13 +224,11 @@ class LoginView(View):
             return render(request,'login.html',{'msg':'密码格式不正确'})
         # 使用django系统自带的用户认证代码，将会返回一个user对象，如果账号密码正确就还返回该对象否则返回None
         return_user = auth.authenticate(mobile=mobile, password=password)
-        print(return_user)
         if return_user is None:
             return render(request,'login.html',{'msg':'账号或密码错误'})
         request.session['name'] = return_user
         # 状态保持
         login(request, return_user)
-        print('sss')
         # print(login(request, return_user))
         # 6、设置cookie信息，为首页显示服务
         # 根据匿名登录跳转参数next，跳转到指定页面
@@ -402,7 +400,7 @@ class UserCenterView(LoginRequiredMixin, View):
         # 5、返回相应
         return resp
 
-
+# 写文章
 class WriteBlogView(LoginRequiredMixin, View):
     def get(self, requset):
         if requset.session.get('name'):
@@ -435,7 +433,6 @@ class WriteBlogView(LoginRequiredMixin, View):
         sumary = request.POST.get('sumary')
         content = request.POST.get('content')
         user = request.user
-        print(avatar, title, category_id, sumary, tags, content)
         # 2、验证数据
         # 2-1、参数齐全验证
         if not all([avatar, title, category_id, sumary, content]):
